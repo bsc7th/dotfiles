@@ -1,7 +1,7 @@
 theme = "Solarized Dark - Patched"
 
-background-opacity = 0.75
-background-blur-radius = 10
+background-opacity = 0.5
+background-blur-radius = 20
 background = #031219
 
 cursor-style = block
@@ -10,4 +10,9 @@ cursor-style-blink = true
 font-size=19
 font-family = "PlemolJP Console NF"
 
+keybind = global:cmd+o=toggle_quick_terminal
+
 macos-titlebar-style = hidden
+mouse-hide-while-typing = true
+
+window-decoration = true
