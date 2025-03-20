@@ -89,3 +89,15 @@ A fancy, configurable, notification manager for NeoVim
 - [oil.nvim](https://dotfyle.com/plugins/stevearc/oil.nvim)
 
 Neovim file explorer: edit your filesystem like a buffer
+
+- [plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
+
+Plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
+
+- [refactoring.nvim](https://dotfile.com/plugins/ThePrimeagen/refactoring.nvim)
+
+Neovim plugin developed by ThePrimeagen that facilitates code refactoring within the editor.
+
+- [rest.nvim](https://dotfyle.com/plugins/rest-nvim/rest.nvim)
+
+A very fast, powerful, extensible and asynchronous Neovim HTTP client written in Lua.
