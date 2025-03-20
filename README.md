@@ -8,7 +8,7 @@
 
 - [nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 
-nvim-autopairs is a autopair plugin that supports multiple characters. It provides a seamless experience for inserting and handling paired characters in various filetypes. The plugin offers default values that can be easily overridden, and it integrates well with popular completion plugins. Users can define custom rules and conditions for autopair behavior. Additionally, nvim-autopairs includes a feature called FastWrap, which allows for quick wrapping of selected text with specified characters.
+nvim-autopairs provides a seamless experience for inserting and handling paired characters in various filetypes.
 
 - [solarized-osaka](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
 
