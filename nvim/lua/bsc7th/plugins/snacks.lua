@@ -27,7 +27,7 @@ return {
   },
   keys = {
     {
-      "<leader>ff",
+      "<leader>/f",
       function()
         Snacks.picker.smart()
       end,
