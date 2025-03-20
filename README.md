@@ -33,3 +33,15 @@ Neovim plugin to improve the default vim.ui interfaces
 - [emoji.nvim](https://dotfyle.com/plugins/allaman/emoji.nvim)
 
 A plugin to search for and insert emojis/kaomojis, with auto-completion support, right from Neovim 😀
+
+- [gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
+
+A Git integration plugin for Neovim that provides signs and hunk actions in the sign column
+
+- [glow.nvim](https://dotfyle.com/plugins/ellisonleao/glow.nvim)
+
+A markdown preview directly in your neovim.
+
+- [inc-rename.nvim](https://dotfyle.com/plugins/smjonas/inc-rename.nvim)
+
+Incremental LSP renaming based on Neovim's command-preview feature.
