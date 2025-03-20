@@ -57,3 +57,31 @@ Plugin for calling lazygit from within neovim.
 - [mardown.nvim](https://dotfyle.com/plugins/MeanderingProgrammer/markdown.nvim)
 
 Plugin to improve viewing Markdown files in Neovim
+
+- [mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
+
+Easily install and manage LSP servers, DAP servers, linters, and formatters.
+
+- [mini.icons](https://dotfyle.com/plugins/echasnovski/mini.icons)
+
+Icon provider. Part of 'mini.nvim' library.
+
+- [noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
+
+Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+
+- [nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)
+
+A completion plugin for neovim coded in Lua.
+
+- [nvim-colorizer.lua](https://dotfyle.com/plugins/catgoose/nvim-colorizer.lua)
+
+The fastest Neovim colorizer
+
+- [nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
+
+Quickstart configs for Nvim LSP
+
+- [nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
+
+A fancy, configurable, notification manager for NeoVim
