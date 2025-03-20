@@ -1,0 +1,12 @@
+theme = "Solarized Dark - Patched"
+
+background-opacity = 0.75
+background-blur-radius = 10
+background = #031219
+
+font-size=19
+
+font-family = "PlemolJP Console NF"
+
+cursor-style = block
+cursor-style-blink = true
