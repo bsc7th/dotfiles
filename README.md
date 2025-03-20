@@ -20,4 +20,16 @@ Lightweight yet powerful formatter plugin for Neovim
 
 - [copilot.lua](https://dotfyle.com/plugins/zbirenbaum/copilot.lua)
 
-- Fully featured & enhanced replacement for copilot.vim complete with API for interacting with Github Copilot
+Fully featured & enhanced replacement for copilot.vim complete with API for interacting with Github Copilot
+
+- [vim-dadbod-ui](https://github.com/bsc7th/dotfiles/blob/main/nvim/lua/bsc7th/plugins/dadbod-ui.lua)
+
+A remote neovim plugin for viewing Dadbod query results in a web browser
+
+- [dressing.nvim](https://dotfyle.com/plugins/stevearc/dressing.nvim)
+
+Neovim plugin to improve the default vim.ui interfaces
+
+- [emoji.nvim](https://dotfyle.com/plugins/allaman/emoji.nvim)
+
+A plugin to search for and insert emojis/kaomojis, with auto-completion support, right from Neovim 😀
