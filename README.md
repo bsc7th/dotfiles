@@ -138,13 +138,11 @@ Create key bindings that stick. WhichKey helps you remember your Neovim keymaps,
 
 Distraction-free coding for Neovim
 
-## TMUX Configuration
+## [TMUX Configuration](https://github.com/tmux/tmux/wiki)
 
 I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) keybindings.
 
 ![bsc7th-tmux](assets/bsc7th-tmux.jpg)
-
-### [TMUX](https://github.com/tmux/tmux/wiki)
 
 [tmux.conf](https://github.com/bsc7th/dotfiles/blob/main/tmux/.tmux.conf)
 
