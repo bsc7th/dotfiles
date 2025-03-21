@@ -6,15 +6,15 @@
 
 ## My Current Plugins
 
-[nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
+### [nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 
 - Provides a seamless experience for inserting and handling paired characters in various filetypes.
 
-[solarized-osaka](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
+### [solarized-osaka](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
 
 - A clean, dark Neovim theme written in Lua, with support for lsp, treesitter and lots of plugins.
 
-[conform.nvim](https://dotfyle.com/plugins/stevearc/conform.nvim)
+### [conform.nvim](https://dotfyle.com/plugins/stevearc/conform.nvim)
 
 - Lightweight yet powerful formatter plugin for Neovim
 
