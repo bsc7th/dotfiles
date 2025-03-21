@@ -12,7 +12,7 @@ If you need detailed, beginner-friendly guidelines on how to set up Neovim from 
 
 - [The Only Video You Need to Get Started with Neovim](https://www.youtube.com/watch?v=m8C0Cq9Uv9o) by [TJ DeVries](https://github.com/tjdevries)
 
-If you're using [LazyVim distro](https://www.lazyvim.org/) I recommend the following:
+If you're using [LazyVim distro](https://www.lazyvim.org/) you can check the following:
 
 - [LazyVim Documentation](https://www.lazyvim.org/)
 
@@ -22,7 +22,7 @@ If you're using [LazyVim distro](https://www.lazyvim.org/) I recommend the follo
 
 - [Effective NeoVim Setup for Full-Stack Web Development in 2024](https://www.youtube.com/watch?v=V070Zmvx9AM) by [Mateo Sindičić](https://www.youtube.com/@sindo_dev) also known as [Sindo](https://www.youtube.com/@sindo_dev) on YouTube, and [JazzyGrim](https://github.com/JazzyGrim?tab=repositories) on GitHub.
 
-## My Current Plugins
+## 🛠️ My Current Plugins
 
 ### [nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 
