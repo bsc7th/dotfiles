@@ -224,7 +224,7 @@ I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Jo
 
 [craftzdog utility.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/utility.conf)
 
-## 📂 [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
+## 📚 [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
 
 ![bsc7th-yazi](assets/bsc7th-yazi.jpg)
 
