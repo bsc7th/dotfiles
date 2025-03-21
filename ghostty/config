@@ -1,3 +1,9 @@
+# Control the auto-update functionality of Ghostty
+auto-update = check
+
+# The release channel to use for auto-updates
+auto-update-channel = stable
+
 # Adjusts the width of each cell in the terminal as a percentage of the terminal's width.
 adjust-cell-width = 3%
 
