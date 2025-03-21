@@ -8,6 +8,7 @@ background = #031219
 
 cursor-style = block
 cursor-style-blink = false
+cursor-text = #AE8B2D
 config-default-files = true
 
 font-size=19
