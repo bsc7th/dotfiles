@@ -14,7 +14,7 @@ If you need detailed, beginner-friendly guidelines on how to set up Neovim from 
 
 If you're using [LazyVim distro](https://www.lazyvim.org/) you can check the following:
 
-- [LazyVim Documentation](https://www.lazyvim.org/)
+- [LazyVim Documentation](https://www.lazyvim.org/) 💤
 
 - [LazyVim From Scratch To BEAST MODE](https://www.youtube.com/watch?v=evCmP4hH7ZU) by [Omer Hamerman](https://www.youtube.com/@devopstoolbox) also known as [DevOps Toolbox](https://www.youtube.com/@devopstoolbox) on YouTube, and [omerxx](https://github.com/omerxx) on GitHub.
 
@@ -22,7 +22,7 @@ If you're using [LazyVim distro](https://www.lazyvim.org/) you can check the fol
 
 - [Effective NeoVim Setup for Full-Stack Web Development in 2024](https://www.youtube.com/watch?v=V070Zmvx9AM) by [Mateo Sindičić](https://www.youtube.com/@sindo_dev) also known as [Sindo](https://www.youtube.com/@sindo_dev) on YouTube, and [JazzyGrim](https://github.com/JazzyGrim?tab=repositories) on GitHub.
 
-## 🛠️ My Current Plugins
+## 🔗 My Current Plugins
 
 ### [nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 
@@ -160,7 +160,7 @@ Create key bindings that stick. WhichKey helps you remember your Neovim keymaps,
 
 Distraction-free coding for Neovim
 
-## [TMUX Configuration](https://github.com/tmux/tmux/wiki)
+## 💪 [TMUX Configuration](https://github.com/tmux/tmux/wiki)
 
 I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) keybindings.
 
@@ -176,7 +176,7 @@ I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Jo
 
 [craftzdog utility.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/utility.conf)
 
-## [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
+## 📂 [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
 
 ![bsc7th-yazi](assets/bsc7th-yazi.jpg)
 
