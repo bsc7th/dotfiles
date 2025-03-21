@@ -299,7 +299,7 @@ bind -r g display-popup -d '#{pane_current_path}' -w80% -h80% -E lazygit
 
 ## Yazi
 
-![bsc7th-yazi](assets/bsc7th-yazy.jpg)
+![bsc7th-yazi](assets/bsc7th-yazi.jpg)
 
 ### keymap.toml
 
