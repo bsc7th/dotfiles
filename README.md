@@ -1,5 +1,3 @@
-![bsc7th-neovim](assets/bsc7th-neovim.jpg)
-
 # bsc7th's dotfiles
 
 Most of my plugins come from [Folke's](https://github.com/folke) Neovim config, with a few others from talented developers at Neovim Spectrum. My workflow is inspired by [Josean Martinez's](https://github.com/josean-dev) and [Takuya Matsuyama](https://github.com/craftzdog), also known as [craftzdog](https://github.com/craftzdog) or [devaslife](https://www.youtube.com/results?search_query=devaslife) on YouTube. You can also check [Neovim website](https://neovim.io/) as a guide, as it provides detailed information on each plugins helping you better understand how things work.
@@ -23,6 +21,8 @@ If you're using [LazyVim distro](https://www.lazyvim.org/) you can check the fol
 - [Effective NeoVim Setup for Full-Stack Web Development in 2024](https://www.youtube.com/watch?v=V070Zmvx9AM) by [Mateo Sindičić](https://www.youtube.com/@sindo_dev) also known as [Sindo](https://www.youtube.com/@sindo_dev) on YouTube, and [JazzyGrim](https://github.com/JazzyGrim?tab=repositories) on GitHub.
 
 ## 🔗 My Current Plugins
+
+![bsc7th-neovim](assets/bsc7th-neovim.jpg)
 
 ### [nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 
