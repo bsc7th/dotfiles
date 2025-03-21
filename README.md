@@ -140,7 +140,7 @@ Distraction-free coding for Neovim
 
 ## TMUX Configuration
 
-I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) config.
+I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) keybindings.
 
 ![bsc7th-tmux](assets/bsc7th-tmux.jpg)
 
