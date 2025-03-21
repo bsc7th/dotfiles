@@ -4,13 +4,21 @@
 
 Most of my plugins come from [Folke's](https://github.com/folke) Neovim config, with a few others from talented developers at Neovim Spectrum. My workflow is inspired by [Josean Martinez's](https://github.com/josean-dev) and [Takuya Matsuyama](https://github.com/craftzdog), also known as [craftzdog](https://github.com/craftzdog) or [devaslife](https://www.youtube.com/results?search_query=devaslife) on YouTube. You can also use the Neovim website as a guide, as it provides detailed information on each repository, helping you better understand how things work.
 
-If you need detailed, beginner-friendly guidelines on how to set up Neovim, I highly recommend watching Josean's YouTube videos.
+If you need detailed, beginner-friendly guidelines on how to set up Neovim from scratch, I highly recommend watching Josean's YouTube videos.
 
-- [How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide](https://www.youtube.com/watch?v=6pAG3BHurdM)
+- [How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide](https://www.youtube.com/watch?v=6pAG3BHurdM) by [Josean Martinez](https://github.com/josean-dev)
 
 You can also check his blog.
 
-- [How I Setup Neovim On My Mac To Make it AMAZING in 2024](https://www.josean.com/posts/how-to-setup-neovim-2024)
+- [How I Setup Neovim On My Mac To Make it AMAZING in 2024](https://www.josean.com/posts/how-to-setup-neovim-2024) by [Josean Martinez](https://github.com/josean-dev)
+
+If you're using [LazyVim distro](https://www.lazyvim.org/) I recommend the following:
+
+- [Effective Neovim setup for web development towards 2024](https://www.youtube.com/watch?v=fFHlfbKVi30) by [Takuya Matsuyama](https://github.com/craftzdog)
+
+You can also check his blog.
+
+- [Effective Neovim setup for web development towards 2024](https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/) by [Takuya Matsuyama](https://github.com/craftzdog)
 
 ## My Current Plugins
 
