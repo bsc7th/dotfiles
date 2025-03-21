@@ -160,6 +160,50 @@ Create key bindings that stick. WhichKey helps you remember your Neovim keymaps,
 
 Distraction-free coding for Neovim
 
+## [Ghostty Configuration](https://github.com/bsc7th/dotfiles/tree/main/ghostty)
+
+![bsc7th-ghostty](assets/bsc7th-ghostty.jpg)
+
+```
+adjust-cell-width = 3%
+adjust-cell-height = 3%
+adjust-font-baseline = 20%
+
+background-opacity = 0.75
+background-blur-radius = 20
+background = #031219
+
+cursor-style = block
+cursor-style-blink = false
+config-default-files = true
+
+font-size=19
+font-family = "PlemolJP Console NF"
+font-family-bold = true
+font-thicken = true
+font-feature = 1
+focus-follows-mouse = false
+
+keybind = global:cmd+o=toggle_quick_terminal
+
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
+macos-non-native-fullscreen = false
+mouse-hide-while-typing = true
+
+quick-terminal-position = bottom
+
+shell-integration = zsh
+
+theme = "Solarized Dark - Patched"
+
+window-decoration = true
+window-padding-x = 5
+window-padding-y = 7
+window-padding-balance = true
+
+```
+
 ## 💪 [TMUX Configuration](https://github.com/tmux/tmux/wiki)
 
 I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) keybindings.
