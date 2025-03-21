@@ -2,7 +2,7 @@
 
 # bsc7th's dotfiles
 
-Most of my plugins come from [Folke's](https://github.com/folke) Neovim config, with a few others from talented developers at Neovim Spectrum. My workflow is inspired by [Josean Martinez's](https://github.com/josean-dev) and [Takuya Matsuyama](https://github.com/craftzdog), also known as [craftzdog](https://github.com/craftzdog) or [devaslife](https://www.youtube.com/results?search_query=devaslife) on YouTube. I recommend checking it out yourself instead of blindly cloning any repository. You can also use the Neovim website as a guide, as it provides detailed information on each repository, helping you better understand how things work.
+Most of my plugins come from [Folke's](https://github.com/folke) Neovim config, with a few others from talented developers at Neovim Spectrum. My workflow is inspired by [Josean Martinez's](https://github.com/josean-dev) and [Takuya Matsuyama](https://github.com/craftzdog), also known as [craftzdog](https://github.com/craftzdog) or [devaslife](https://www.youtube.com/results?search_query=devaslife) on YouTube. You can also use the Neovim website as a guide, as it provides detailed information on each repository, helping you better understand how things work.
 
 ### [solarized-osaka](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
 
@@ -257,4 +257,33 @@ setw -g window-status-separator ""
 setw -g window-status-style "NONE,fg=#839496,bg=#002b36"
 setw -g window-status-format '#[fg=#002b36,bg=#002b36]#[default] #I  #{b:pane_current_path} #[fg=#002b36,bg=#002b36,nobold,nounderscore,noitalics]'
 setw -g window-status-current-format '#[fg=#002b36,bg=#eee8d5]#[fg=#b58900,bg=#eee8d5] #I #[fg=#eee8d5,bg=#b58900] #{b:pane_current_path} #[fg=#b58900,bg=#002b36,nobold]'
+```
+
+### cratfzdog theme.conf
+
+```
+#### COLOUR (Solarized 256)
+
+# default statusbar colors
+set-option -g status-style bg=colour235,fg=colour136,default
+
+# default window title colors
+set-window-option -g window-status-style fg=colour244,bg=colour234,dim
+
+# active window title colors
+set-window-option -g window-status-current-style fg=colour166,bg=default,bright
+
+# pane border
+set-option -g pane-border-style fg=colour235 #base02
+set-option -g pane-active-border-style fg=colour136,bg=colour235
+
+# message text
+set-option -g message-style bg=colour235,fg=colour166
+
+# pane number display
+set-option -g display-panes-active-colour colour33 #blue
+set-option -g display-panes-colour colour166 #orange
+
+# clock
+set-window-option -g clock-mode-colour colour64 #green
 ```
