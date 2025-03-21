@@ -160,9 +160,11 @@ Create key bindings that stick. WhichKey helps you remember your Neovim keymaps,
 
 Distraction-free coding for Neovim
 
-## [Ghostty Configuration](https://github.com/bsc7th/dotfiles/tree/main/ghostty)
+## 👻 [Ghostty Configuration](https://github.com/bsc7th/dotfiles/tree/main/ghostty)
 
 ![bsc7th-ghostty](assets/bsc7th-ghostty.jpg)
+
+### config
 
 ```
 adjust-cell-width = 3%
