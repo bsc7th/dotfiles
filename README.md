@@ -297,7 +297,7 @@ set-window-option -g clock-mode-colour colour64 #green
 bind -r g display-popup -d '#{pane_current_path}' -w80% -h80% -E lazygit
 ```
 
-## Yazi
+## [yazi](https://yazi-rs.github.io/docs/installation/)
 
 ![bsc7th-yazi](assets/bsc7th-yazi.jpg)
 
