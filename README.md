@@ -301,7 +301,7 @@ bind -r g display-popup -d '#{pane_current_path}' -w80% -h80% -E lazygit
 
 ![bsc7th-yazi](assets/bsc7th-yazi.jpg)
 
-### keymap.toml
+### [keymap.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/keymap.toml)
 
 ```
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
@@ -667,7 +667,7 @@ keymap = [
 ]
 ```
 
-### yazi.toml
+### [yazi.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/yazi.toml)
 
 ```
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
