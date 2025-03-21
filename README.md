@@ -2,13 +2,7 @@
 
 # bsc7th's dotfiles
 
-**Important**: Most of my plugins come from [Folke's](https://github.com/folke) Neovim config, with a few others from great developers at Neovim Spectrum. My workflow is inspired by [Josean Martinez's](https://github.com/josean-dev?tab=repositories) and [Takuya Matsuyama](https://github.com/craftzdog), also known as [craftzdog](https://github.com/craftzdog) or [devaslife](https://www.youtube.com/results?search_query=devaslife) on YouTube. I recommend checking it out yourself instead of blindly cloning any repository. You can also use the [Neovim website](https://neovim.io/) as a guide, it provides quite a bit of detail on each repository, giving you a better understanding of how things work.
-
-## My Current Plugins
-
-### [nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
-
-Provides a seamless experience for inserting and handling paired characters in various filetypes.
+Most of my plugins come from [Folke's](https://github.com/folke) Neovim config, with a few others from talented developers at Neovim Spectrum. My workflow is inspired by [Josean Martinez's](https://github.com/josean-dev) and [Takuya Matsuyama](https://github.com/craftzdog), also known as [craftzdog](https://github.com/craftzdog) or [devaslife](https://www.youtube.com/results?search_query=devaslife) on YouTube. I recommend checking it out yourself instead of blindly cloning any repository. You can also use the Neovim website as a guide, as it provides detailed information on each repository, helping you better understand how things work.
 
 ### [solarized-osaka](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
 
@@ -141,3 +135,126 @@ Create key bindings that stick. WhichKey helps you remember your Neovim keymaps,
 ### [zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)
 
 Distraction-free coding for Neovim
+
+## TMUX Configuration
+
+I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) config.
+
+![bsc7th-tmux](assets/bsc7th-tmux.jpg)
+
+### tmux.conf
+
+```
+set -g default-terminal "screen-256color"
+set -ag terminal-overrides ",xterm-256color:RGB"
+set -g default-terminal "tmux-256color"
+
+# Wezterm
+set -as terminal-features ",wezterm:RGB"
+
+# Undercurl
+set -g default-terminal "${TERM}"
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
+
+## Fix titlebar
+set -g set-titles on
+set -g set-titles-string "#T"
+
+set -g prefix C-a
+unbind C-b
+bind-key C-a send-prefix
+
+unbind %
+bind | split-window -h
+
+unbind '"'
+bind - split-window -v
+
+unbind r
+bind r source-file ~/.tmux.conf
+
+bind -r j resize-pane -D 5
+bind -r k resize-pane -U 5
+bind -r l resize-pane -R 5
+bind -r h resize-pane -L 5
+
+bind -r m resize-pane -Z
+
+set -g mouse off
+
+set-window-option -g mode-keys vi
+
+bind-key -T copy-mode-vi 'v' send -X begin-selection # start selecting text with "v"
+bind-key -T copy-mode-vi 'y' send -X copy-selection # copy text with "y"
+
+unbind -T copy-mode-vi MouseDragEnd1Pane # don't exit copy mode after dragging with mouse
+
+# Set the status bar to show the Git branch and project name
+set -g status-right '#(git -C #{pane_current_path} rev-parse --abbrev-ref HEAD 2>/dev/null) | #{pane_current_path}'
+
+# Display lazygit
+bind -r g display-popup -d '#{pane_current_path}' -w80% -h80% -E lazygit
+
+# TPM plugin
+set -g @plugin 'tmux-plugins/tpm'
+
+# List of plugins
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'jimeh/tmux-themepack'
+set -g @themepack 'powerline/default/gray'
+
+source ~/.config/tmux/theme.conf
+source ~/.config/tmux/statusline.conf
+source ~/.config/tmux/utility.conf
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run "~/.tmux/plugins/tpm/tpm"
+```
+
+### craftzdog macos.conf
+
+```
+# osx clipboard
+set-option -g default-command "which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
+
+# Undercurl
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+```
+
+### craftzdog statusline.conf
+
+```
+# vim: ft=tmux
+set -g mode-style "fg=#eee8d5,bg=#073642"
+
+set -g message-style "fg=#eee8d5,bg=#073642"
+set -g message-command-style "fg=#eee8d5,bg=#073642"
+
+set -g pane-border-style "fg=#073642"
+set -g pane-active-border-style "fg=#eee8d5"
+
+set -g status "on"
+set -g status-interval 1
+set -g status-justify "left"
+
+set -g status-style "fg=#586e75,bg=#073642"
+
+set -g status-bg "#002b36"
+
+set -g status-left-length "100"
+set -g status-right-length "100"
+
+set -g status-left-style NONE
+set -g status-right-style NONE
+
+set -g status-left "#[fg=#073642,bg=#eee8d5,bold] #S #[fg=#eee8d5,bg=#93a1a1,nobold,nounderscore,noitalics]#[fg=#15161E,bg=#93a1a1,bold] #(whoami) #[fg=#93a1a1,bg=#002b36]"
+set -g status-right "#[fg=#586e75,bg=#002b36,nobold,nounderscore,noitalics]#[fg=#93a1a1,bg=#586e75]#[fg=#657b83,bg=#586e75,nobold,nounderscore,noitalics]#[fg=#93a1a1,bg=#657b83]#[fg=#93a1a1,bg=#657b83,nobold,nounderscore,noitalics]#[fg=#15161E,bg=#93a1a1,bold] #h "
+
+setw -g window-status-activity-style "underscore,fg=#839496,bg=#002b36"
+setw -g window-status-separator ""
+setw -g window-status-style "NONE,fg=#839496,bg=#002b36"
+setw -g window-status-format '#[fg=#002b36,bg=#002b36]#[default] #I  #{b:pane_current_path} #[fg=#002b36,bg=#002b36,nobold,nounderscore,noitalics]'
+setw -g window-status-current-format '#[fg=#002b36,bg=#eee8d5]#[fg=#b58900,bg=#eee8d5] #I #[fg=#eee8d5,bg=#b58900] #{b:pane_current_path} #[fg=#b58900,bg=#002b36,nobold]'
+```
