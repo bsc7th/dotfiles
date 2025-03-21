@@ -8,10 +8,6 @@ If you need detailed, beginner-friendly guidelines on how to set up Neovim from 
 
 - [How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide](https://www.youtube.com/watch?v=6pAG3BHurdM) by [Josean Martinez](https://github.com/josean-dev)
 
-You can also check his blog.
-
-- [How I Setup Neovim On My Mac To Make it AMAZING in 2024](https://www.josean.com/posts/how-to-setup-neovim-2024) by [Josean Martinez](https://github.com/josean-dev)
-
 - [0 to LSP : Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE) by [ThePrimeagen](https://github.com/ThePrimeagen)
 
 - [The Only Video You Need to Get Started with Neovim](https://www.youtube.com/watch?v=m8C0Cq9Uv9o) by [TJ DeVries](https://github.com/tjdevries)
@@ -21,10 +17,6 @@ If you're using [LazyVim distro](https://www.lazyvim.org/) I recommend the follo
 - [LazyVim Documentation](https://www.lazyvim.org/)
 
 - [Effective Neovim setup for web development towards 2024](https://www.youtube.com/watch?v=fFHlfbKVi30) by [Takuya Matsuyama](https://github.com/craftzdog)
-
-You can also check his blog.
-
-- [Effective Neovim setup for web development towards 2024](https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/) by [Takuya Matsuyama](https://github.com/craftzdog)
 
 - [Effective NeoVim Setup for Full-Stack Web Development in 2024](https://www.youtube.com/watch?v=V070Zmvx9AM) by [Mateo Sindičić](https://www.youtube.com/@sindo_dev) also known as [Sindo](https://www.youtube.com/@sindo_dev) on YouTube, and [JazzyGrim](https://github.com/JazzyGrim?tab=repositories) on GitHub.
 
