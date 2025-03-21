@@ -18,9 +18,9 @@ If you're using [LazyVim distro](https://www.lazyvim.org/) I recommend the follo
 
 - [Effective Neovim setup for web development towards 2024](https://www.youtube.com/watch?v=fFHlfbKVi30) by [Takuya Matsuyama](https://github.com/craftzdog) also koown as [devaslife](https://www.youtube.com/@devaslife) on YouTube, and [craftzdog](https://github.com/craftzdog) on GitHub.
 
-- [Effective NeoVim Setup for Full-Stack Web Development in 2024](https://www.youtube.com/watch?v=V070Zmvx9AM) by [Mateo Sindičić](https://www.youtube.com/@sindo_dev) also known as [Sindo](https://www.youtube.com/@sindo_dev) on YouTube, and [JazzyGrim](https://github.com/JazzyGrim?tab=repositories) on GitHub.
-
 - [LazyVim From Scratch To BEAST MODE](https://www.youtube.com/watch?v=evCmP4hH7ZU) by [Omer Hamerman](https://www.youtube.com/@devopstoolbox) also known as [DevOps Toolbox](https://www.youtube.com/@devopstoolbox) on YouTube, and [omerxx](https://github.com/omerxx) on GitHub.
+
+- [Effective NeoVim Setup for Full-Stack Web Development in 2024](https://www.youtube.com/watch?v=V070Zmvx9AM) by [Mateo Sindičić](https://www.youtube.com/@sindo_dev) also known as [Sindo](https://www.youtube.com/@sindo_dev) on YouTube, and [JazzyGrim](https://github.com/JazzyGrim?tab=repositories) on GitHub.
 
 ## My Current Plugins
 
