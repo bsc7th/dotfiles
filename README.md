@@ -154,9 +154,9 @@ I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Jo
 
 [craftzdog utility.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/utility.conf)
 
-![bsc7th-yazi](assets/bsc7th-yazi.jpg)
+## [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
 
-## [yazi](https://yazi-rs.github.io/docs/installation/)
+![bsc7th-yazi](assets/bsc7th-yazi.jpg)
 
 [keymap.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/keymap.toml)
 
