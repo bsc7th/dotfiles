@@ -162,7 +162,7 @@ Distraction-free coding for Neovim
 
 ## 👻 [Ghostty Configuration](https://github.com/bsc7th/dotfiles/tree/main/ghostty)
 
-I've been a long-time WezTerm user, but I've been using Ghostty for a while now, and I'm loving it. Give it a try, it's a great terminal emulator, just like WezTerm.
+I’ve been hooked on WezTerm ever since I dove into web development 6 months ago. But today, March 21, 2025, I’m switching things up and giving the awesome [Ghostty](https://ghostty.org/) terminal a try!
 
 ![bsc7th-ghostty](assets/bsc7th-ghostty.jpg)
 
