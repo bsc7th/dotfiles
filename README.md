@@ -32,7 +32,7 @@ Neovim plugin to improve the default vim.ui interfaces
 
 ### [emoji.nvim](https://dotfyle.com/plugins/allaman/emoji.nvim)
 
-A plugin to search for and insert emojis/kaomojis, with auto-completion support, right from Neovim 😀
+A plugin to search for and insert emojis/kaomojis, with auto-completion support, right from Neovim
 
 ### [gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
 
@@ -94,10 +94,50 @@ Neovim file explorer: edit your filesystem like a buffer
 
 Plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
 
-### [refactoring.nvim](https://dotfile.com/plugins/ThePrimeagen/refactoring.nvim)
+### [refactoring.nvim](https://github.com/ThePrimeagen/refactoring.nvim)
 
 Neovim plugin developed by ThePrimeagen that facilitates code refactoring within the editor.
 
 ### [rest.nvim](https://dotfyle.com/plugins/rest-nvim/rest.nvim)
 
 A very fast, powerful, extensible and asynchronous Neovim HTTP client written in Lua.
+
+### [snacks.nvim](https://dotfyle.com/plugins/folke/snacks.nvim)
+
+A collection of QoL plugins for Neovim
+
+### [substitute.nvim](https://dotfyle.com/plugins/gbprod/substitute.nvim)
+
+Neovim plugin introducing a new operators motions to quickly replace and exchange text.
+
+### [nvim-surround](https://dotfyle.com/plugins/kylechui/nvim-surround)
+
+Add/change/delete surrounding delimiter pairs with ease. Written with :heart: in Lua.
+
+### [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+
+Seamless navigation between tmux panes and vim splits
+
+### [todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
+
+Highlight, list and search todo comments in your projects
+
+### [nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
+
+Nvim Treesitter configurations and abstraction layer
+
+### [trouble.nvim](https://dotfyle.com/plugins/folke/trouble.nvim)
+
+A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+
+### [vim-maximizer](https://github.com/szw/vim-maximizer)
+
+Maximizes and restores the current window in Vim.
+
+### [which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
+
+Create key bindings that stick. WhichKey helps you remember your Neovim keymaps, by showing available keybindings in a popup as you type.
+
+### [zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)
+
+Distraction-free coding for Neovim
