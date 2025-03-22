@@ -6,7 +6,7 @@ return {
     build = ":Copilot auth",
     opts = {
       suggestion = {
-        enabled = false,
+        enabled = true,
         auto_trigger = false,
         hide_during_completion = true,
         keymap = {
@@ -17,7 +17,7 @@ return {
       },
       panel = { enabled = false },
       filetypes = {
-        markdown = true,
+        markdown = false,
         help = true,
       },
     },
