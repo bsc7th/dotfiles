@@ -10,9 +10,6 @@ adjust-cell-width = 3%
 # Adjusts the height of each cell in the terminal as a percentage of the terminal's height.
 adjust-cell-height = 3%
 
-# Thickness in pixels or percentage adjustment of the bar cursor and outlined rect cursor
-adjust-cursor-thickness = 1
-
 # Adjusts the vertical alignment of text by modifying the font's baseline.
 adjust-font-baseline = 20%
 
