@@ -33,6 +33,10 @@
   "editor.formatOnSave": true, // Auto format on save
   "editor.cursorSmoothCaretAnimation": "on", // Smooth cursor animation
   "editor.defaultFormatter": "esbenp.prettier-vscode", // Default formatter
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
 
   // Formatters
   "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
