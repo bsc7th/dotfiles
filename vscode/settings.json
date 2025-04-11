@@ -1,55 +1,66 @@
 {
   // ===============================
-  // 🌈 Workbench UI Customization
+  // 🔄 Update Settings
   // ===============================
-  "workbench.colorTheme": "Minimal", // Sets the color theme
-  "workbench.iconTheme": "glyph.legacy", // Sets the icon theme
+  "update.mode": "none", // Disables automatic updates
+
+  // ===============================
+  // 🪟 Window & Title Bar
+  // ===============================
+  "window.titleBarStyle": "native", // Use native OS title bar
+  "window.customTitleBarVisibility": "never", // Hide custom title bar (when native is on)
+  "window.commandCenter": false, // Hide the command center
+
+  // ===============================
+  // 🧭 Workbench UI
+  // ===============================
+  "workbench.iconTheme": "glyph.legacy", // Use legacy icons
+  "workbench.colorTheme": "Minimal", // Set theme
   "workbench.fontAliasing": "antialiased", // Smoother font rendering
-  "workbench.activityBar.location": "top", // Moves activity bar to top
-  "workbench.sideBar.location": "right", // Moves sidebar to the right
-  "workbench.statusBar.visible": false, // Hides the status bar
-  "workbench.layoutControl.enabled": false, // Disables layout controls
-  "workbench.navigationControl.enabled": false, // Disables navigation control
-  "workbench.tips.enabled": false, // Disables tips
-  "workbench.tree.renderIndentGuides": "none", // No indent guides in tree
-  "workbench.tree.indent": 16, // Sets tree indentation
-  "workbench.tree.enableStickyScroll": false, // Disables sticky scroll
-  "workbench.editor.showTabs": "single", // Only shows tab for active file
-  "workbench.startupEditor": "none", // Disables welcome/start page
+  "workbench.activityBar.location": "top", // Activity bar on top
+  "workbench.sideBar.location": "right", // Sidebar on right
+  "workbench.statusBar.visible": false, // Hide status bar
+  "workbench.layoutControl.enabled": false, // Hide layout control
+  "workbench.navigationControl.enabled": false, // Hide navigation control
+  "workbench.tips.enabled": false, // Disable tips
+  "workbench.tree.renderIndentGuides": "none", // No indent guides
+  "workbench.tree.indent": 16, // Tree indentation size
+  "workbench.tree.enableStickyScroll": false, // Disable sticky scroll
+  "workbench.editor.showTabs": "single", // Only show tab for active file
+  "workbench.startupEditor": "none", // Disable welcome screen
 
   // ===============================
-  // 🪟 Window Settings
+  // 📁 Explorer
   // ===============================
-  "window.titleBarStyle": "native", // Uses native title bar style
-  "window.customTitleBarVisibility": "never", // Hides custom title bar
-  "window.commandCenter": false, // Disables command center
+  "explorer.compactFolders": false, // Show full folder tree
+  "explorer.confirmDragAndDrop": false, // No drag-drop confirmation
+  "explorer.confirmDelete": false, // No delete confirmation
+  "explorer.decorations.badges": false, // Hide badges (e.g., git status)
 
   // ===============================
-  // 📂 Explorer Settings
+  // 📝 Editor – Appearance
   // ===============================
-  "explorer.compactFolders": false, // Shows full folder hierarchy
-  "explorer.confirmDragAndDrop": false, // Skips drag/drop confirmations
-  "explorer.confirmDelete": false, // Skips delete confirmations
-  "explorer.decorations.badges": false, // Hides file badges
-
-  // ===============================
-  // 📝 Editor Settings
-  // ===============================
-  "editor.fontSize": 20, // Editor font size
-  "editor.lineHeight": 2.0, // Line height for readability
-  "editor.fontFamily": "PlemolJP Console NF", // Custom font
-  "editor.fontLigatures": true, // Enable font ligatures
-  "editor.cursorBlinking": "solid", // No blinking cursor
+  "editor.fontSize": 20,
+  "editor.lineHeight": 2.0,
+  "editor.fontFamily": "PlemolJP Console NF",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false, // Hide minimap
   "editor.lineNumbers": "relative", // Relative line numbers
-  "editor.wordWrap": "on", // Wrap text
-  "editor.formatOnSave": true, // Auto format on save
+  "editor.cursorBlinking": "solid", // No blinking cursor
   "editor.cursorSmoothCaretAnimation": "on", // Smooth cursor animation
-  "editor.defaultFormatter": "esbenp.prettier-vscode", // Default formatter
-  "editor.scrollbar.horizontal": "hidden", // Hide horizontal scrollbar
-  "editor.scrollbar.vertical": "hidden", // Hide vertical scrollbar
-  "editor.overviewRulerBorder": false, // Hide overview ruler border
-  "editor.hideCursorInOverviewRuler": true, // Hide cursor in overview ruler
-  "editor.minimap.enabled": false, // Disable minimap
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+
+  // ===============================
+  // 📝 Editor – Behavior & Formatting
+  // ===============================
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabCompletion": "on",
+  "editor.snippetSuggestions": "top",
 
   // ===============================
   // 🎯 Language-specific Formatters
@@ -65,44 +76,95 @@
   // ===============================
   // 🎨 Prettier Formatter Settings
   // ===============================
-  "prettier.arrowParens": "avoid", // Avoid parens for single param
-  "prettier.semi": false, // No semicolons
-  "prettier.singleQuote": false, // Use double quotes
-  "prettier.printWidth": 80, // Max line width
-  "prettier.tabWidth": 2, // Tab width
-  "prettier.bracketSpacing": false, // No spacing in brackets
-  "prettier.endOfLine": "lf", // Use LF for line endings
+  "prettier.arrowParens": "avoid",
+  "prettier.semi": false,
+  "prettier.singleQuote": false,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.bracketSpacing": false,
+  "prettier.endOfLine": "lf",
 
   // ===============================
-  // 🖥️ Terminal Settings
+  // 🎨 Syntax Highlighting
+  // ===============================
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "ref.matchtext",
+        "settings": {
+          "foreground": "#000"
+        }
+      },
+      {
+        "scope": "ref.matchtext",
+        "settings": {
+          "foreground": "#fff"
+        }
+      },
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+
+  // ===============================
+  // 🖥️ Terminal
   // ===============================
   "terminal.integrated.fontFamily": "PlemolJP Console NF",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.fontLigatures.enabled": true,
 
   // ===============================
-  // 🤖 Extensions & AI Settings
+  // 🤖 Extensions & AI
   // ===============================
-  "chat.commandCenter.enabled": false, // Disables VS Code AI chat
+  "chat.commandCenter.enabled": false, // Disable AI chat
   "github.copilot.enable": {
-    // Disables GitHub Copilot
     "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  },
+  }, // Disable Copilot in all file types
 
   // ===============================
-  // 🧭 Miscellaneous UI
+  // 🧭 Miscellaneous
   // ===============================
-  "breadcrumbs.enabled": false, // Disables file path breadcrumbs
+  "breadcrumbs.enabled": false, // Disable breadcrumb navigation
 
   // ===============================
-  // 🎨 Custom UI Styles (via extension)
+  // 🎨 Custom UI Styles (via Extension)
   // ===============================
   "custom-ui-style.electron": {
-    "titleBarStyle": "hiddenInset", // Hidden title bar with controls
-    "trafficLightPosition": { "x": 16, "y": 9 } // Mac-style traffic light button position
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": { "x": 16, "y": 9 }
   },
   "custom-ui-style.stylesheet": {
     ".notification-toast": "box-shadow: none !important",
@@ -127,34 +189,6 @@
   // 🔗 File Association
   // ===============================
   "files.associations": {
-    ".env*": "dotenv" // Associates .env files with dotenv syntax
-  },
-
-  // ===============================
-  // 🎨 Token Color Customizations
-  // ===============================
-  "editor.tokenColorCustomizations": {
-    "[*Light*]": {
-      "textMateRules": [
-        {
-          "scope": "ref.matchtext",
-          "settings": { "foreground": "#000" }
-        }
-      ]
-    },
-    "[*Dark*]": {
-      "textMateRules": [
-        {
-          "scope": "ref.matchtext",
-          "settings": { "foreground": "#fff" }
-        }
-      ]
-    },
-    "textMateRules": [
-      {
-        "scope": "keyword.other.dotenv",
-        "settings": { "foreground": "#FF000000" }
-      }
-    ]
+    ".env*": "dotenv" // Treat .env files as dotenv
   }
 }
