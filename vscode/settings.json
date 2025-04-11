@@ -1,4 +1,7 @@
 {
+  // ===============================
+  // 🌈 Workbench UI Customization
+  // ===============================
   "workbench.colorTheme": "Minimal", // Sets the color theme
   "workbench.iconTheme": "glyph.legacy", // Sets the icon theme
   "workbench.fontAliasing": "antialiased", // Smoother font rendering
@@ -14,40 +17,54 @@
   "workbench.editor.showTabs": "single", // Only shows tab for active file
   "workbench.startupEditor": "none", // Disables welcome/start page
 
+  // ===============================
+  // 🪟 Window Settings
+  // ===============================
   "window.titleBarStyle": "native", // Uses native title bar style
   "window.customTitleBarVisibility": "never", // Hides custom title bar
+  "window.commandCenter": false, // Disables command center
 
+  // ===============================
+  // 📂 Explorer Settings
+  // ===============================
   "explorer.compactFolders": false, // Shows full folder hierarchy
   "explorer.confirmDragAndDrop": false, // Skips drag/drop confirmations
   "explorer.confirmDelete": false, // Skips delete confirmations
   "explorer.decorations.badges": false, // Hides file badges
 
+  // ===============================
+  // 📝 Editor Settings
+  // ===============================
   "editor.fontSize": 20, // Editor font size
   "editor.lineHeight": 2.0, // Line height for readability
   "editor.fontFamily": "PlemolJP Console NF", // Custom font
   "editor.fontLigatures": true, // Enable font ligatures
   "editor.cursorBlinking": "solid", // No blinking cursor
   "editor.lineNumbers": "relative", // Relative line numbers
-  "editor.wordWrap": "on", // Wrap long lines
-  "editor.minimap.enabled": false, // Disables minimap
+  "editor.wordWrap": "on", // Wrap text
   "editor.formatOnSave": true, // Auto format on save
   "editor.cursorSmoothCaretAnimation": "on", // Smooth cursor animation
   "editor.defaultFormatter": "esbenp.prettier-vscode", // Default formatter
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.overviewRulerBorder": false,
-  "editor.hideCursorInOverviewRuler": true,
+  "editor.scrollbar.horizontal": "hidden", // Hide horizontal scrollbar
+  "editor.scrollbar.vertical": "hidden", // Hide vertical scrollbar
+  "editor.overviewRulerBorder": false, // Hide overview ruler border
+  "editor.hideCursorInOverviewRuler": true, // Hide cursor in overview ruler
+  "editor.minimap.enabled": false, // Disable minimap
 
-  // Formatters
+  // ===============================
+  // 🎯 Language-specific Formatters
+  // ===============================
   "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[ svelte ]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[svelte]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[astro]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 
-  // Prettier Settings
+  // ===============================
+  // 🎨 Prettier Formatter Settings
+  // ===============================
   "prettier.arrowParens": "avoid", // Avoid parens for single param
   "prettier.semi": false, // No semicolons
   "prettier.singleQuote": false, // Use double quotes
@@ -56,28 +73,39 @@
   "prettier.bracketSpacing": false, // No spacing in brackets
   "prettier.endOfLine": "lf", // Use LF for line endings
 
-  "terminal.integrated.fontFamily": "PlemolJP Console NF", // Custom terminal font
-  "terminal.integrated.fontSize": 18, // Terminal font size
-  "terminal.integrated.fontLigatures.enabled": true, // Enable ligatures in terminal
+  // ===============================
+  // 🖥️ Terminal Settings
+  // ===============================
+  "terminal.integrated.fontFamily": "PlemolJP Console NF",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontLigatures.enabled": true,
 
+  // ===============================
+  // 🤖 Extensions & AI Settings
+  // ===============================
   "chat.commandCenter.enabled": false, // Disables VS Code AI chat
-  "window.commandCenter": false, // Disables command center
-
-  "breadcrumbs.enabled": false, // Disables file path breadcrumbs
-
   "github.copilot.enable": {
-    "*": false, // Disables Copilot globally
+    // Disables GitHub Copilot
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
   },
 
+  // ===============================
+  // 🧭 Miscellaneous UI
+  // ===============================
+  "breadcrumbs.enabled": false, // Disables file path breadcrumbs
+
+  // ===============================
+  // 🎨 Custom UI Styles (via extension)
+  // ===============================
   "custom-ui-style.electron": {
     "titleBarStyle": "hiddenInset", // Hidden title bar with controls
-    "trafficLightPosition": { "x": 20, "y": 9 } // Mac-style button position
+    "trafficLightPosition": { "x": 16, "y": 9 } // Mac-style traffic light button position
   },
   "custom-ui-style.stylesheet": {
-    ".notification-toast": "box-shadow: none !important", // Custom styles to remove UI fluff
+    ".notification-toast": "box-shadow: none !important",
     ".quick-input-widget.show-file-icons": "box-shadow: none !important",
     ".quick-input-widget": "top: 25vh !important",
     ".quick-input-list .scrollbar": "display: none",
@@ -87,23 +115,30 @@
     ".monaco-scrollable-element > .shadow.top": "display: none",
     ".monaco-list-row.focused": "outline: none !important",
     ".monaco.-editor .scroll-decoration": "display: none",
-    ".title-actions": "display: none",
-    ".sidebar .titlebar": "padding: 0 !important"
+    ".title-actions": "display: none !important",
+    ".sidebar": "border: none !important",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center",
+    ".title .monaco-icon-label:after": "margin-right: 0",
+    ".sidebar .title-label": "padding: 0 !important"
   },
-  "custom-ui-style.font.sansSerif": "PlemolJP Console NF", // Sets custom sans-serif font
+  "custom-ui-style.font.sansSerif": "PlemolJP Console NF",
 
+  // ===============================
+  // 🔗 File Association
+  // ===============================
   "files.associations": {
-    ".env*": "dotenv"
+    ".env*": "dotenv" // Associates .env files with dotenv syntax
   },
 
+  // ===============================
+  // 🎨 Token Color Customizations
+  // ===============================
   "editor.tokenColorCustomizations": {
     "[*Light*]": {
       "textMateRules": [
         {
           "scope": "ref.matchtext",
-          "settings": {
-            "foreground": "#000"
-          }
+          "settings": { "foreground": "#000" }
         }
       ]
     },
@@ -111,18 +146,14 @@
       "textMateRules": [
         {
           "scope": "ref.matchtext",
-          "settings": {
-            "foreground": "#fff"
-          }
+          "settings": { "foreground": "#fff" }
         }
       ]
     },
     "textMateRules": [
       {
         "scope": "keyword.other.dotenv",
-        "settings": {
-          "foreground": "#FF000000"
-        }
+        "settings": { "foreground": "#FF000000" }
       }
     ]
   }
