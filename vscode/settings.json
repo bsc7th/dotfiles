@@ -1,0 +1,120 @@
+{
+  "workbench.colorTheme": "Minimal", // Sets the color theme
+  "workbench.iconTheme": "glyph.legacy", // Sets the icon theme
+  "workbench.fontAliasing": "antialiased", // Smoother font rendering
+  "workbench.activityBar.location": "top", // Moves activity bar to top
+  "workbench.sideBar.location": "right", // Moves sidebar to the right
+  "workbench.statusBar.visible": false, // Hides the status bar
+  "workbench.layoutControl.enabled": false, // Disables layout controls
+  "workbench.navigationControl.enabled": false, // Disables navigation control
+  "workbench.tips.enabled": false, // Disables tips
+  "workbench.tree.renderIndentGuides": "none", // No indent guides in tree
+  "workbench.tree.indent": 16, // Sets tree indentation
+  "workbench.tree.enableStickyScroll": false, // Disables sticky scroll
+  "workbench.editor.showTabs": "single", // Only shows tab for active file
+  "workbench.startupEditor": "none", // Disables welcome/start page
+
+  "window.titleBarStyle": "native", // Uses native title bar style
+  "window.customTitleBarVisibility": "never", // Hides custom title bar
+
+  "explorer.compactFolders": false, // Shows full folder hierarchy
+  "explorer.confirmDragAndDrop": false, // Skips drag/drop confirmations
+  "explorer.confirmDelete": false, // Skips delete confirmations
+  "explorer.decorations.badges": false, // Hides file badges
+
+  "editor.fontSize": 20, // Editor font size
+  "editor.lineHeight": 2.0, // Line height for readability
+  "editor.fontFamily": "PlemolJP Console NF", // Custom font
+  "editor.fontLigatures": true, // Enable font ligatures
+  "editor.cursorBlinking": "solid", // No blinking cursor
+  "editor.lineNumbers": "relative", // Relative line numbers
+  "editor.wordWrap": "on", // Wrap long lines
+  "editor.minimap.enabled": false, // Disables minimap
+  "editor.formatOnSave": true, // Auto format on save
+  "editor.cursorSmoothCaretAnimation": "on", // Smooth cursor animation
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Default formatter
+
+  // Formatters
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[ svelte ]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[astro]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // Prettier Settings
+  "prettier.arrowParens": "avoid", // Avoid parens for single param
+  "prettier.semi": false, // No semicolons
+  "prettier.singleQuote": false, // Use double quotes
+  "prettier.printWidth": 80, // Max line width
+  "prettier.tabWidth": 2, // Tab width
+  "prettier.bracketSpacing": false, // No spacing in brackets
+  "prettier.endOfLine": "lf", // Use LF for line endings
+
+  "terminal.integrated.fontFamily": "PlemolJP Console NF", // Custom terminal font
+  "terminal.integrated.fontSize": 18, // Terminal font size
+  "terminal.integrated.fontLigatures.enabled": true, // Enable ligatures in terminal
+
+  "chat.commandCenter.enabled": false, // Disables VS Code AI chat
+  "window.commandCenter": false, // Disables command center
+
+  "breadcrumbs.enabled": false, // Disables file path breadcrumbs
+
+  "github.copilot.enable": {
+    "*": false, // Disables Copilot globally
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+
+  "custom-ui-style.electron": {
+    "titleBarStyle": "hiddenInset", // Hidden title bar with controls
+    "trafficLightPosition": { "x": 20, "y": 9 } // Mac-style button position
+  },
+  "custom-ui-style.stylesheet": {
+    ".notification-toast": "box-shadow: none !important", // Custom styles to remove UI fluff
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".quick-input-widget": "top: 25vh !important",
+    ".quick-input-list .scrollbar": "display: none",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".editor-widget.find.widget": "box-shadow: none; border-radius: 4px",
+    " .monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 90px"
+  },
+  "custom-ui-style.font.sansSerif": "PlemolJP Console NF", // Sets custom sans-serif font
+
+  "files.associations": {
+    ".env*": "dotenv" // Syntax highlighting for .env files
+  },
+
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000" // Light theme specific token color
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff" // Dark theme specific token color
+          }
+        }
+      ]
+    },
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000" // Token color for dotenv keywords
+        }
+      }
+    ]
+  }
+}
