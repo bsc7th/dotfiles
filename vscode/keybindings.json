@@ -1,77 +1,73 @@
 [
-  // Move file to trash (cmd+d d)
+  // File & Explorer Commands
   {
     "key": "cmd+d d",
     "command": "moveFileToTrash",
-    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !inputFocus"
+    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !inputFocus",
+    "comment": "Move file to trash (only works if focus is on a moveable file in Explorer)"
   },
-
-  // Undo move to trash (cmd+backspace)
-  {
-    "key": "cmd+backspace",
-    "command": "-moveFileToTrash",
-    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !inputFocus"
-  },
-
-  // Open Git Graph view (cmd+g cmd+g)
-  {
-    "key": "cmd+g cmd+g",
-    "command": "git-graph.view"
-  },
-
-  // Commit changes (cmd+g c)
-  {
-    "key": "cmd+g c",
-    "command": "git.commit"
-  },
-
-  // Amend the last commit (cmd+g a)
-  {
-    "key": "cmd+g a",
-    "command": "git.commitAmend"
-  },
-
-  // Push changes to remote (cmd+g p)
-  {
-    "key": "cmd+g p",
-    "command": "git.push"
-  },
-
-  // Toggle explorer view (cmd+e cmd+e)
   {
     "key": "cmd+e cmd+e",
     "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
+    "when": "viewContainer.workbench.view.explorer.enabled",
+    "comment": "Open Explorer view"
   },
-
-  // Close explorer view (shift+cmd+e)
   {
     "key": "shift+cmd+e",
     "command": "-workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
+    "when": "viewContainer.workbench.view.explorer.enabled",
+    "comment": "Close Explorer view"
   },
-
-  // Toggle sidebar visibility ( - )
-  {
-    "key": "-",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-
-  // Toggle auxiliary bar (cmd+-)
-  {
-    "key": "cmd+-",
-    "command": "workbench.action.toggleAuxiliaryBar"
-  },
-
-  // Show "New File" entries in welcome screen (cmd+n f)
-  {
-    "key": "cmd+n f",
-    "command": "welcome.showNewFileEntries"
-  },
-
-  // Create a new folder in Explorer (cmd+n cmd+f)
   {
     "key": "cmd+n cmd+f",
-    "command": "explorer.newFolder"
+    "command": "explorer.newFolder",
+    "comment": "Create a new folder in Explorer"
+  },
+  {
+    "key": "cmd+n f",
+    "command": "welcome.showNewFileEntries",
+    "comment": "Show new file entries in welcome screen"
+  },
+
+  // Git Commands
+  {
+    "key": "cmd+g cmd+g",
+    "command": "git-graph.view",
+    "comment": "Open Git Graph view"
+  },
+  {
+    "key": "cmd+g c",
+    "command": "git.commit",
+    "comment": "Commit changes in Git"
+  },
+  {
+    "key": "cmd+g a",
+    "command": "git.commitAmend",
+    "comment": "Amend the last commit in Git"
+  },
+  {
+    "key": "cmd+g p",
+    "command": "git.push",
+    "comment": "Push changes to the remote Git repository"
+  },
+
+  // UI and View Toggle Commands
+  {
+    "key": "-",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "comment": "Toggle visibility of the sidebar"
+  },
+  {
+    "key": "cmd+-",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "comment": "Toggle visibility of the auxiliary bar"
+  },
+
+  // Commenting in Editor
+  {
+    "key": "cmd+l c",
+    "command": "editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly",
+    "comment": "Add a comment line in the editor (works when the editor is focused and not in readonly mode)"
   }
 ]
