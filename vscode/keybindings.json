@@ -53,7 +53,7 @@
 
   // UI and View Toggle Commands
   {
-    "key": "-",
+    "key": "shift+o e",
     "command": "workbench.action.toggleSidebarVisibility",
     "comment": "Toggle visibility of the sidebar"
   },
@@ -69,5 +69,25 @@
     "command": "editor.action.addCommentLine",
     "when": "editorTextFocus && !editorReadonly",
     "comment": "Add a comment line in the editor (works when the editor is focused and not in readonly mode)"
+  },
+  {
+    "key": "cmd+r cmd+n",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+r cmd+n",
+    "command": "workbench.action.terminal.renameActiveTab",
+    "when": "terminalHasBeenCreated && terminalTabsFocus && terminalTabsSingularSelection || terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection"
+  },
+  {
+    "key": "enter",
+    "command": "-workbench.action.terminal.renameActiveTab",
+    "when": "terminalHasBeenCreated && terminalTabsFocus && terminalTabsSingularSelection || terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection"
   }
 ]
