@@ -126,7 +126,7 @@ window-padding-y = 7
 window-padding-balance = true
 ```
 
-## 💪 [TMUX Configuration](https://github.com/tmux/tmux/wiki)
+## 🈁 [TMUX Configuration](https://github.com/tmux/tmux/wiki)
 
 I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Josean Martinez's](https://github.com/josean-dev?tab=repositories) keybindings.
 
@@ -149,3 +149,9 @@ I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Jo
 [keymap.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/keymap.toml)
 
 [yazi.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/yazi.toml)
+
+## 💪 VSCode Configuration
+
+Flexibility is essential.
+
+![bsc7th-vscode](assets/bsc7th-vscode.png)
