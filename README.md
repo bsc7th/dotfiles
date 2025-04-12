@@ -154,4 +154,4 @@ I use [Takuya Matsuyama](https://github.com/craftzdog) tmux custom theme and [Jo
 
 Flexibility is essential.
 
-![bsc7th-vscode](assets/bsc7th-vscode.png)
+![bsc7th-vscode](assets/bsc7th-vscode.jpeg)
