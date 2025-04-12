@@ -1,0 +1,77 @@
+[
+  // Move file to trash (cmd+d d)
+  {
+    "key": "cmd+d d",
+    "command": "moveFileToTrash",
+    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+
+  // Undo move to trash (cmd+backspace)
+  {
+    "key": "cmd+backspace",
+    "command": "-moveFileToTrash",
+    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+
+  // Open Git Graph view (cmd+g cmd+g)
+  {
+    "key": "cmd+g cmd+g",
+    "command": "git-graph.view"
+  },
+
+  // Commit changes (cmd+g c)
+  {
+    "key": "cmd+g c",
+    "command": "git.commit"
+  },
+
+  // Amend the last commit (cmd+g a)
+  {
+    "key": "cmd+g a",
+    "command": "git.commitAmend"
+  },
+
+  // Push changes to remote (cmd+g p)
+  {
+    "key": "cmd+g p",
+    "command": "git.push"
+  },
+
+  // Toggle explorer view (cmd+e cmd+e)
+  {
+    "key": "cmd+e cmd+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+
+  // Close explorer view (shift+cmd+e)
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+
+  // Toggle sidebar visibility ( - )
+  {
+    "key": "-",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+
+  // Toggle auxiliary bar (cmd+-)
+  {
+    "key": "cmd+-",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+
+  // Show "New File" entries in welcome screen (cmd+n f)
+  {
+    "key": "cmd+n f",
+    "command": "welcome.showNewFileEntries"
+  },
+
+  // Create a new folder in Explorer (cmd+n cmd+f)
+  {
+    "key": "cmd+n cmd+f",
+    "command": "explorer.newFolder"
+  }
+]
