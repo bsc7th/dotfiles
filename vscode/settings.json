@@ -7,15 +7,11 @@
   // ===============================
   // 🪟 Window & Title Bar
   // ===============================
+  "workbench.colorTheme": "Minimal", // Set theme
+  "workbench.iconTheme": "glyph.legacy", // Set icon
   "window.titleBarStyle": "native", // Use native OS title bar
   "window.customTitleBarVisibility": "never", // Hide custom title bar (when native is on)
-  "window.commandCenter": false, // Hide the command center
-
-  // ===============================
-  // 🧭 Workbench UI
-  // ===============================
-  "workbench.iconTheme": "glyph.legacy", // Use legacy icons
-  "workbench.colorTheme": "Minimal", // Set theme
+  "window.commandCenter": false,
   "workbench.fontAliasing": "antialiased", // Smoother font rendering
   "workbench.activityBar.location": "top", // Activity bar on top
   "workbench.sideBar.location": "right", // Sidebar on right
@@ -65,13 +61,13 @@
   // ===============================
   // 🎯 Language-specific Formatters
   // ===============================
-  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[svelte]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[astro]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[javascriptreact]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[typescript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[typescriptreact]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[svelte]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[astro]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
 
   // ===============================
   // 🎨 Prettier Formatter Settings
@@ -83,6 +79,7 @@
   "prettier.tabWidth": 2,
   "prettier.bracketSpacing": false,
   "prettier.endOfLine": "lf",
+  "prettier.trailingComma": "none",
 
   // ===============================
   // 🎨 Syntax Highlighting
@@ -140,7 +137,7 @@
   // 🖥️ Terminal
   // ===============================
   "terminal.integrated.fontFamily": "PlemolJP Console NF",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontLigatures.enabled": true,
 
   // ===============================
@@ -164,7 +161,7 @@
   // ===============================
   "custom-ui-style.electron": {
     "titleBarStyle": "hiddenInset",
-    "trafficLightPosition": { "x": 16, "y": 9 }
+    "trafficLightPosition": {"x": 16, "y": 9}
   },
   "custom-ui-style.stylesheet": {
     ".notification-toast": "box-shadow: none !important",
@@ -189,6 +186,14 @@
   // 🔗 File Association
   // ===============================
   "files.associations": {
-    ".env*": "dotenv" // Treat .env files as dotenv
-  }
+    ".env*": "dotenv"
+  },
+
+  // ===============================
+  // 🔗 Bun Configuration
+  // ===============================
+  "bun.runtime": "/path/to/bun", // The path to the `bun` executable.
+  "bun.debugTerminal.enabled": true, // If support for Bun should be added to the default "JavaScript Debug Terminal".
+  "bun.debugTerminal.stopOnEntry": false, // If the debugger should stop on the first line of the program.
+  "bun.test.filePattern": "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}" // Glob pattern to find test files. Defaults to the value shown below.
 }
