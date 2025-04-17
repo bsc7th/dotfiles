@@ -53,7 +53,7 @@
 
   // UI and View Toggle Commands
   {
-    "key": "shift+o e",
+    "key": "ctrl+o e",
     "command": "workbench.action.toggleSidebarVisibility",
     "comment": "Toggle visibility of the sidebar"
   },
