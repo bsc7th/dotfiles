@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 vim.cmd("let g:netrw_liststyle = 3")
 
 vim.opt.encoding = "utf-8"
@@ -9,10 +7,10 @@ vim.opt.shortmess:append("I")
 
 local opt = vim.opt
 
+vim.g.mapleader = " "
+
 vim.opt.relativenumber = true
 vim.opt.number = true
-
-vim.g.snacks_animate = false
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -35,7 +33,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.backspace = "indent,eol,start"
 
-opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+vim.opt.clipboard:append("unnamedplus")
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
