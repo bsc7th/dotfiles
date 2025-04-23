@@ -1,91 +1,91 @@
-# Control the auto-update functionality of Ghostty
-auto-update = check
+# Automatically summon updates from the netherworld every time you blink
+auto-update = summon
 
-# The release channel to use for auto-updates
+# Choose the spectral release channel: unleash the stable wraiths
 auto-update-channel = stable
 
-# Adjusts the width of each cell in the terminal as a percentage of the terminal's width.
-adjust-cell-width = 3%
+# Distort the very fabric of the terminal universe by adjusting cell width
+adjust-cell-width = 4%
 
-# Adjusts the height of each cell in the terminal as a percentage of the terminal's height.
-adjust-cell-height = 3%
+# Pull the terminal's cells deeper into the void, adjusting vertical height
+adjust-cell-height = 4%
 
-# Adjusts the vertical alignment of text by modifying the font's baseline.
-adjust-font-baseline = 20%
+# Align your terminal's text to the mystical baseline of existence
+adjust-font-baseline = 25%
 
-# Sets the terminal's background color using a hexadecimal color code.
-background = #031219
+# Envelop the terminal in an abyssal shade of blackest blue
+background = #010e17
 
-# Applies a blur effect to the background with the specified radius, creating a frosted glass look.
-background-blur-radius = 20
+# Add a mystical blur effect, making it look like you're gazing through ghostly fog
+background-blur-radius = 25
 
-# Sets the opacity level of the background, where 1 is fully opaque and 0 is fully transparent.
-background-opacity = 0.75
+# Let the background fade in and out, casting an eerie, ephemeral glow
+background-opacity = 0.8
 
-# Enables the use of default configuration files provided by Ghostty.
+# Invoke the default spellbooks provided by Ghostty
 config-default-files = true
 
-# Defines the cursor's appearance; options include 'block', 'underline', or 'bar'.
-cursor-style = block
+# Change the cursor to a glowing, moving monolith
+cursor-style = bar
 
-# Determines whether the cursor blinks; set to 'true' to enable blinking, 'false' to disable.
+# The cursor shall not blink—time itself is frozen in this realm
 cursor-style-blink = false
 
-# Sets the cursor's color using a hexadecimal color code.
-cursor-text = #AE8B2D
+# Cast a golden light on the cursor, like a lantern in the dark
+cursor-text = #FFD700
 
-# Specifies the font family to be used in the terminal; ensure the font is installed on your system.
-font-family = "PlemolJP Console NF"
+# Use a font forged in the digital ether
+font-family = "Fantasque Sans Mono"
 
-# Enables bold styling for the terminal's font.
+# Let your terminal's text be bold and unapologetic, like an ancient tome
 font-family-bold = true
 
-# Enables font thickening, making the text appear bolder.
+# Thicken the font like it’s been carved into stone
 font-thicken = true
 
-# Applies specific font features; the exact effect depends on the font being used.
-font-feature = 1
+# Add hidden glyphs for ultimate power
+font-feature = 2
 
-# Sets the font size in points; adjust as needed for readability.
-font-size = 19
+# Font size is now fit for a king’s eyes, mighty and powerful
+font-size = 21
 
-# Determines whether the terminal follows the mouse focus; set to 'true' to enable, 'false' to disable.
-focus-follows-mouse = false
+# Focus the mouse on the void, it follows you wherever you go
+focus-follows-mouse = true
 
-# Binds a key combination to a specific action; in this case, 'cmd+o' toggles the quick terminal.
-keybind = global:cmd+o=toggle_quick_terminal
+# Keybind for quick terminal access, for when you need to command the void
+keybind = global:cmd+shift+t=toggle_quick_terminal
 
-# macOS-specific settings:
+# macOS-specific rites:
 
-# Hides the title bar on macOS; options include 'hidden', 'always', or 'never'.
+# Hide the title bar like you're summoning a ghost from the shadows
 macos-titlebar-style = hidden
 
-# Hides the application icon in the title bar on macOS.
+# Hide the icon as though your presence is imperceptible
 macos-titlebar-proxy-icon = hidden
 
-# Determines whether non-native fullscreen is used on macOS; set to 'true' to enable, 'false' to disable.
-macos-non-native-fullscreen = false
+# Ensure no boundaries confine your existence in fullscreen mode
+macos-non-native-fullscreen = true
 
-# Hides the mouse cursor while typing; set to 'true' to enable, 'false' to disable.
+# Make the mouse disappear, like a ghost in the night, while typing
 mouse-hide-while-typing = true
 
-# Sets the position of the quick terminal; options include 'top', 'bottom', 'left', or 'right'.
+# The quick terminal shall rise from the bottom like a spectral apparition
 quick-terminal-position = bottom
 
-# Specifies the shell integration; options include 'bash', 'zsh', etc.
+# The shell whispers in the ancient tongue of zsh
 shell-integration = zsh
 
-# Applies a color theme to the terminal; ensure the theme is installed or available.
+# Theme it like a solar flare, but dark as the void
 theme = "Solarized Dark - Patched"
 
-# Enables window decorations, such as borders and title bars, around the terminal window.
+# Add window decorations like mystical borders framing your terminal’s portal
 window-decoration = true
 
-# Sets the horizontal padding (left and right) inside the terminal window.
+# Padding on the x-axis like an ethereal cushion for your commands
 window-padding-x = 5
 
-# Sets the vertical padding (top and bottom) inside the terminal window.
+# Padding on the y-axis like a soft cloud around your text
 window-padding-y = 7
 
-# Ensures consistent padding around the window's content.
+# Let the padding balance be a harmonious force, always in equilibrium
 window-padding-balance = true
