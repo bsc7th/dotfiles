@@ -1,6 +1,6 @@
 # bsc7th's dotfiles
 
-And if you're looking to build your Neovim setup from the ground up, fear not, the following resources will guide you 🫵🏻
+If you're looking to build your Neovim setup from the ground up, fear not, the following resources will guide you 🫵🏻
 
 - [How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide](https://www.youtube.com/watch?v=6pAG3BHurdM) by [Josean Martinez](https://github.com/josean-dev)
 
@@ -22,7 +22,7 @@ And if you're looking to build your Neovim setup from the ground up, fear not, t
 
 ## 👻 [Ghostty Configuration](https://github.com/bsc7th/dotfiles/tree/main/ghostty)
 
-I’ve been hooked on [WezTerm](https://wezterm.org/) ever since I dove into web development 6 months ago. But today, March 21, 2025, I’m switching things up and giving the awesome [Ghostty](https://ghostty.org/) terminal a try!
+I’ve been vibing with [WezTerm](https://wezterm.org) ever since I dove into web development. But today, I’m switching gears and giving the rad [Ghostty](https://ghostty.org) terminal a spin!
 
 ![bsc7th-ghostty](assets/bsc7th-ghostty.jpg)
 
@@ -30,26 +30,10 @@ I’ve been hooked on [WezTerm](https://wezterm.org/) ever since I dove into web
 
 ![bsc7th-tmux](assets/bsc7th-tmux.jpg)
 
-[tmux.conf](https://github.com/bsc7th/dotfiles/blob/main/tmux/.tmux.conf)
-
-[craftzdog macos.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/macos.conf)
-
-[craftzdog statusline.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/statusline.conf)
-
-[cratfzdog theme.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/theme.conf)
-
-[craftzdog utility.conf](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/utility.conf)
-
 ## 📚 [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
-
-![bsc7th-yazi](assets/bsc7th-yazi.jpg)
-
-[keymap.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/keymap.toml)
-
-[yazi.toml](https://github.com/bsc7th/dotfiles/blob/main/yazi/yazi.toml)
 
 ## 🤔 VSCode Configuration
 
-Testing VSCode
+Testing VSCode, let's vibe!
 
 ![bsc7th-vscode](assets/bsc7th-vscode.jpeg)
