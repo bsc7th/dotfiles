@@ -32,6 +32,8 @@ I’ve been vibing with [WezTerm](https://wezterm.org) ever since I dove into we
 
 ## 📚 [Yazi Configuration](https://yazi-rs.github.io/docs/installation/)
 
+![bsc7th-yazi](assets/bsc7th-yazi.jpg)
+
 ## 🤔 VSCode Configuration
 
 Testing VSCode, let's vibe!
