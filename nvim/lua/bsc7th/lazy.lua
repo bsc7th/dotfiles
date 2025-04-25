@@ -14,10 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { import = "bsc7th.plugins" },
   { import = "bsc7th.plugins.lsp" },
-  { import = "bsc7th.plugins.ui" },
-  { import = "bsc7th.plugins.editor" },
   { import = "bsc7th.plugins.git" },
-  { import = "bsc7th.plugins.utils" },
 }, {
   checker = {
     enabled = true,
