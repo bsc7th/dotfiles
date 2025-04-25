@@ -65,8 +65,8 @@ return {
             ["]i"] = { query = "@conditional.outer", desc = "Next conditional start" },
             ["]l"] = { query = "@loop.outer", desc = "Next loop start" },
 
-            -- You can pass a query group to use query from `queries/<lang>/<query_group>.scm file in your runtime path.
-            -- Below example nvim-treesitter's `locals.scm` and `folds.scm`. They also provide highlights.scm and indent.scm.
+            -- You can pass a query group to use query from queries/<lang>/<query_group>.scm file in your runtime path.
+            -- Below example nvim-treesitter's locals.scm and folds.scm`. They also provide highlights.scm and indent.scm.
             ["]s"] = { query = "@scope", query_group = "locals", desc = "Next scope" },
             ["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
           },
@@ -102,9 +102,9 @@ return {
     vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_opposite)
 
     -- Optionally, make builtin f, F, t, T also repeatable with ; and ,
-    vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f)
-    vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F)
-    vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t)
-    vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
+    vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f_expr, { expr = true })
+    vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F_expr, { expr = true })
+    vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t_expr, { expr = true })
+    vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T_expr, { expr = true })
   end,
 }
