@@ -1,6 +1,10 @@
 # bsc7th's dotfiles
 
-If you're looking to build your Neovim setup from the ground up, fear not, the following resources will guide you 🫵🏻
+## Lakad Matatag: A Special Part of My Config
+
+Discipline and focus are key! As a reminder to stay strong and persistent in my learning journey, I’ve customized the discipline.lua with this message, **Lakad Matatag (Stay Strong, Keep Going)**. This is also my tribute to Dunno, Filipino DOTA 2 shoutcaster who passed away. His passion and dedication live on through this message.
+
+If you're looking to build your Neovim setup from the ground up, fear not, the following resources will guide you
 
 - [How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide](https://www.youtube.com/watch?v=6pAG3BHurdM) by [Josean Martinez](https://github.com/josean-dev)
 
