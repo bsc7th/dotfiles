@@ -1,71 +1,73 @@
-# 🧐 If the instant prompt exists, we load it! (aka the magical zsh prompt powers!)
+# Load the instant prompt if it exists
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"  # ⚡ Power up with instant prompt!
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# 🚀 Load the Powerlevel10k theme (aka the snazzy terminal theme)
+# Load the Powerlevel10k theme
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-# ✨ Add autosuggestions because typing is overrated
+
+# Load zsh autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# 🎨 Syntax highlighting – because we like colors that make us feel fancy
+
+# Load zsh syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# 🔧 "y" function: navigate to cool directories like a wizard
+# "y" function: navigate to a directory selected via Yazi
 function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd  # 🧙‍♂️ Temporary file magic for cwd
-  yazi "$@" --cwd-file="$tmp"  # ⚡ Call Yazi to get that CWD
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
   if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"  # 🏃‍♂️ Jump to the new directory if we have one
+    builtin cd -- "$cwd"
   fi
-  rm -f -- "$tmp"  # 🧹 Clean up like a true digital janitor
+  rm -f -- "$tmp"
 }
 
-# 🌈 "ls" alias, but with extra sparkle thanks to eza!
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"  # ✨ "ls" with icons and no boring details!
+# Alias "ls" to use eza with icons and simplified output
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
-# 🎉 Zoxide for smarter directory navigation (don't just cd, ZOXIDE!)
-eval "$(zoxide init zsh)"  # 🔥 Initialize Zoxide
+# Initialize Zoxide for smarter directory navigation
+eval "$(zoxide init zsh)"
 
-# 📚 Set the default bat theme for syntax highlighting (keep it colorful)
+# Set the default theme for bat syntax highlighting
 export BAT_THEME=ansi
 
-# 🌍 Show file or directory preview – see what's inside before opening it
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"  # 👀 See what's up before diving in!
+# Preview files or directories in FZF
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
-# 🧠 Customize FZF for previewing files (because we all need better search)
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"  # 🔍 Fuzzy file search with preview
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"  # 🔍 Fuzzy dir search with preview
+# Customize FZF options for file and directory preview
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
-# 🚀 Custom function for FZF commands with dynamic preview options
+# Custom FZF completion runner with different previews based on command
 _fzf_comprun() {
   local command=$1
   shift
 
   case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;  # 🌳 Fuzzy cd with a tree preview
-    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;  # 💡 Fuzzy export/unset with a preview
-    ssh)          fzf --preview 'dig {}'                   "$@" ;;  # 🖥 Fuzzy SSH with a DNS preview
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;  # 🔍 Default fuzzy search preview
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'" "$@" ;;
+    ssh)          fzf --preview 'dig {}' "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
 
-# 💻 Default FZF command: Find files quickly (fd is our friend)
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"  # 🏃‍♂️ Find files (but no .git folders)
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"  # 🔥 Search all the things!
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"  # 🔍 Fuzzy dir search
+# Set the default FZF commands for finding files and directories
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-# 💨 Path completion with fzf – because who needs to type all that?
+# FZF path completion function
 _fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"  # 🔑 Find paths faster!
+  fd --hidden --exclude .git . "$1"
 }
 
-# 📂 Directory completion with fzf – find the right dir in a snap!
+# FZF directory completion function
 _fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"  # 🏙️ Explore directories quickly!
+  fd --type=d --hidden --exclude .git . "$1"
 }
 
-# 🚀 Fuzzy-finding magic for zsh
-eval "$(fzf --zsh)"  # ✨ Enable fzf integration with zsh
+# Enable FZF integration with Zsh
+eval "$(fzf --zsh)"
 
-# 📦 Powerlevel10k config file, loading if it exists (gotta keep it looking good)
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh  # 🔥 Load the Powerlevel10k config if we have it
+# Load Powerlevel10k configuration if it exists
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
