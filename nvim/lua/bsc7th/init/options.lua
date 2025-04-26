@@ -5,8 +5,6 @@ vim.opt.fileencoding = "utf-8"
 
 vim.opt.shortmess:append("I")
 
-local opt = vim.opt
-
 vim.g.mapleader = " "
 
 vim.opt.relativenumber = true
@@ -47,13 +45,19 @@ vim.opt.hlsearch = true
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 
+vim.opt.formatoptions:append({ "r" })
+
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
 
-opt.swapfile = false
+vim.swapfile = false
 
 if vim.fn.has("nvim-0.8") == 1 then
   vim.opt.cmdheight = 0
 end
+
+vim.g.lazyvim_prettier_needs_config = true
+vim.g.lazyvim_picker = "fzf-lua"
+vim.g.lazyvim_cmp = "blink.cmp"
