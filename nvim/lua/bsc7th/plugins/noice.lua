@@ -43,5 +43,12 @@ return {
 
     opts.presets = opts.presets or {}
     opts.presets.lsp_doc_border = true
+
+    opts.lsp = opts.lsp or {}
+    opts.lsp.override = {
+      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      ["vim.lsp.util.stylize_markdown"] = true,
+      ["cmp.entry.get_documentation"] = true,
+    }
   end,
 }
