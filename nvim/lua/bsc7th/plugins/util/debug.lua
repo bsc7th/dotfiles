@@ -100,8 +100,7 @@ function estimateSize(value, visited)
   elseif type(value) == "string" then
     bytes = string.len(value) + 24
   elseif type(value) == "function" then
-    bytes = 32 -- base size for a function
-    -- add size of upvalues
+    bytes = 32
     local i = 1
     while true do
       local name, val = debug.getupvalue(value, i)
@@ -112,7 +111,7 @@ function estimateSize(value, visited)
       i = i + 1
     end
   elseif type(value) == "table" then
-    bytes = 40 -- base size for a table entry
+    bytes = 40
     for k, v in pairs(value) do
       bytes = bytes + estimateSize(k, visited) + estimateSize(v, visited)
     end
@@ -129,7 +128,6 @@ function M.module_leaks(filter)
   for modname, mod in pairs(package.loaded) do
     if not filter or modname:match(filter) then
       local root = modname:match("^([^%.]+)%..*$") or modname
-      -- root = modname
       sizes[root] = sizes[root] or { mod = root, size = 0 }
       sizes[root].size = sizes[root].size + estimateSize(mod) / 1024 / 1024
     end
