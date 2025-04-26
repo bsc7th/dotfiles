@@ -24,3 +24,15 @@ require("lazy").setup({
     notify = false,
   },
 })
+
+if vim.loader then
+  vim.loader.enable()
+end
+
+require("bsc7th.plugins.util.debug")
+_G.dd = function(...)
+  require("bsc7th.plugins.util.debug").dump(...)
+end
+vim.print = _G.dd
+
+require("bsc7th.plugins.craftzdog.discipline").cowboy()
