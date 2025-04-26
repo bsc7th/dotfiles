@@ -1,102 +1,105 @@
 return {
   "ibhagwan/fzf-lua",
   event = "VeryLazy",
-  dependencies = { "echasnovski/mini.icons", "echasnovski/mini.fuzzy" },
+  dependencies = { "echasnovski/mini.icons", "echasnovski/mini.fuzzy", "nvim-lua/plenary.nvim" },
   keys = {
     {
       "<leader>fc",
       function()
         require("fzf-lua").commands()
       end,
-      desc = "search commands",
+      desc = "Search commands",
     },
     {
       "<leader>fch",
       function()
         require("fzf-lua").command_history()
       end,
-      desc = "search command history",
+      desc = "Search command history",
     },
+
     {
       "<leader>ff",
       function()
         require("fzf-lua").files()
       end,
-      desc = "search old files",
+      desc = "Search files",
     },
     {
       "<leader>fh",
       function()
         require("fzf-lua").highlights()
       end,
-      desc = "search highlights",
+      desc = "Search highlights",
     },
     {
       "<leader>fM",
       function()
         require("fzf-lua").marks()
       end,
-      desc = "search marks",
+      desc = "Search marks",
     },
     {
       "<leader>fk",
       function()
         require("fzf-lua").keymaps()
       end,
-      desc = "search keymaps",
+      desc = "Search keymaps",
     },
+
     {
       "<leader>flg",
       function()
         require("fzf-lua").live_grep()
       end,
-      desc = "live grep",
+      desc = "Live grep",
     },
     {
       "<leader>fgf",
       function()
         require("fzf-lua").git_files()
       end,
-      desc = "search git file names",
+      desc = "Search git files",
     },
     {
       "<leader>fgb",
       function()
         require("fzf-lua").git_branches()
       end,
-      desc = "search git branches",
+      desc = "Search git branches",
     },
     {
       "<leader>fgc",
       function()
         require("fzf-lua").git_commits()
       end,
-      desc = "search git commits",
+      desc = "Search git commits",
     },
     {
       "<leader>fgC",
       function()
         require("fzf-lua").git_bcommits()
       end,
-      desc = "search git buffer commits",
+      desc = "Search buffer git commits",
     },
+
     {
       "<leader>fr",
       function()
         require("fzf-lua").resume()
       end,
-      desc = "resume fzf",
+      desc = "Resume previous search",
     },
   },
   config = function()
     local fzf = require("fzf-lua")
+
     fzf.setup({
       keymap = {
         fzf = {
           ["CTRL-Q"] = "select-all+accept",
         },
       },
-
       fzf_opts = { ["--wrap"] = true },
       winopts = {
         preview = {
@@ -105,6 +108,7 @@ return {
         formatter = "path.filename_first",
       },
     })
+
     local function fzf_directories(opts)
       local fzf_lua = require("fzf-lua")
       local fzf_path = require("fzf-lua.path")
@@ -113,10 +117,6 @@ return {
       local cwd = vim.fn.getcwd()
       opts.prompt = fzf_path.shorten(cwd) .. "> "
       opts.cwd = cwd
-
-      -- opts.fn_transform = function(x)
-      --   return fzf_lua.utils.ansi_codes.magenta(x)
-      -- end
 
       opts.actions = {
         ["default"] = function(selected)
@@ -129,6 +129,10 @@ return {
 
     vim.api.nvim_create_user_command("FzfDirectories", function()
       fzf_directories({})
+    end, {})
+
+    vim.api.nvim_create_user_command("FzfGitFiles", function()
+      fzf.fzf_exec("git ls-files", { prompt = "Git Files > " })
     end, {})
   end,
 }
