@@ -1,5 +1,9 @@
 # bsc7th's dotfiles
 
+## Well-Maintained & Up-to-Date
+
+This project is actively maintained with the latest features, bug fixes, and improvements. All deprecated dependencies have been removed, ensuring a smooth, modern development experience. Keep your workflow fresh and optimized!
+
 ## Lakad Matatag: A Special Part of My Config
 
 Discipline and focus are key! As a reminder to stay strong and persistent in my learning journey, I’ve customized the discipline.lua with this message, **Lakad Matatag (Stay Strong, Keep Going)**. This is also my tribute to Dunno, Filipino DOTA 2 shoutcaster who passed away. His passion and dedication live on through this message.
