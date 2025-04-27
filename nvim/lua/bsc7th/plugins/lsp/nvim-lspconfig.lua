@@ -70,6 +70,22 @@ return {
           capabilities = capabilities,
         })
       end,
+
+      ["astro"] = function()
+        lspconfig["astro"].setup({
+          capabilities = capabilities,
+          on_attach = function(client, bufnr)
+            vim.api.nvim_create_autocmd("BufWritePost", {
+              pattern = { "*.js", "*.ts" },
+              callback = function(ctx)
+                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+              end,
+            })
+          end,
+          filetypes = { "astro", "html", "javascript", "typescript" },
+        })
+      end,
+
       ["svelte"] = function()
         lspconfig["svelte"].setup({
           capabilities = capabilities,
@@ -81,20 +97,24 @@ return {
               end,
             })
           end,
+          filetypes = { "svelte", "html", "javascript", "typescript" },
         })
       end,
+
       ["graphql"] = function()
         lspconfig["graphql"].setup({
           capabilities = capabilities,
-          filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+          filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact", "svelte" },
         })
       end,
+
       ["emmet_ls"] = function()
         lspconfig["emmet_ls"].setup({
           capabilities = capabilities,
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
+
       ["lua_ls"] = function()
         lspconfig["lua_ls"].setup({
           capabilities = capabilities,
