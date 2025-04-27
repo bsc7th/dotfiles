@@ -1,56 +1,56 @@
 {
   // ===============================
-  // 🔄 Update Settings
+  // Update Settings
   // ===============================
-  "update.mode": "none", // Disables automatic updates
+  "update.mode": "none",
 
   // ===============================
-  // 🪟 Window & Title Bar
+  // Window & Title Bar
   // ===============================
-  "workbench.colorTheme": "Minimal", // Set theme
-  "workbench.iconTheme": "glyph.legacy", // Set icon
-  "window.titleBarStyle": "native", // Use native OS title bar
-  "window.customTitleBarVisibility": "never", // Hide custom title bar (when native is on)
+  "workbench.colorTheme": "Minimal",
+  "workbench.iconTheme": "glyph.legacy",
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
   "window.commandCenter": false,
-  "workbench.fontAliasing": "antialiased", // Smoother font rendering
-  "workbench.activityBar.location": "top", // Activity bar on top
-  "workbench.sideBar.location": "right", // Sidebar on right
-  "workbench.statusBar.visible": false, // Hide status bar
-  "workbench.layoutControl.enabled": false, // Hide layout control
-  "workbench.navigationControl.enabled": false, // Hide navigation control
-  "workbench.tips.enabled": false, // Disable tips
-  "workbench.tree.renderIndentGuides": "none", // No indent guides
-  "workbench.tree.indent": 16, // Tree indentation size
-  "workbench.tree.enableStickyScroll": false, // Disable sticky scroll
-  "workbench.editor.showTabs": "single", // Only show tab for active file
-  "workbench.startupEditor": "none", // Disable welcome screen
+  "workbench.fontAliasing": "antialiased",
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.tips.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 16,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.startupEditor": "none",
 
   // ===============================
-  // 📁 Explorer
+  // Explorer Settings
   // ===============================
-  "explorer.compactFolders": false, // Show full folder tree
-  "explorer.confirmDragAndDrop": false, // No drag-drop confirmation
-  "explorer.confirmDelete": false, // No delete confirmation
-  "explorer.decorations.badges": false, // Hide badges (e.g., git status)
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
 
   // ===============================
-  // 📝 Editor – Appearance
+  // Editor – Appearance
   // ===============================
   "editor.fontSize": 20,
   "editor.lineHeight": 2.0,
   "editor.fontFamily": "PlemolJP Console NF",
   "editor.fontLigatures": true,
-  "editor.minimap.enabled": false, // Hide minimap
-  "editor.lineNumbers": "relative", // Relative line numbers
-  "editor.cursorBlinking": "solid", // No blinking cursor
-  "editor.cursorSmoothCaretAnimation": "on", // Smooth cursor animation
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
 
   // ===============================
-  // 📝 Editor – Behavior & Formatting
+  // Editor – Behavior & Formatting
   // ===============================
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
@@ -59,7 +59,7 @@
   "editor.snippetSuggestions": "top",
 
   // ===============================
-  // 🎯 Language-specific Formatters
+  // Language-specific Formatters
   // ===============================
   "[html]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
   "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
@@ -70,7 +70,7 @@
   "[astro]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
 
   // ===============================
-  // 🎨 Prettier Formatter Settings
+  // Prettier Formatter Settings
   // ===============================
   "prettier.arrowParens": "avoid",
   "prettier.semi": false,
@@ -82,7 +82,7 @@
   "prettier.trailingComma": "none",
 
   // ===============================
-  // 🎨 Syntax Highlighting
+  // Syntax Highlighting
   // ===============================
   "editor.tokenColorCustomizations": {
     "[*Light*]": {
@@ -134,30 +134,30 @@
   },
 
   // ===============================
-  // 🖥️ Terminal
+  // Terminal Settings
   // ===============================
   "terminal.integrated.fontFamily": "PlemolJP Console NF",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontLigatures.enabled": true,
 
   // ===============================
-  // 🤖 Extensions & AI
+  // Extensions & AI
   // ===============================
-  "chat.commandCenter.enabled": false, // Disable AI chat
+  "chat.commandCenter.enabled": false,
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  }, // Disable Copilot in all file types
+  },
 
   // ===============================
-  // 🧭 Miscellaneous
+  // Miscellaneous
   // ===============================
-  "breadcrumbs.enabled": false, // Disable breadcrumb navigation
+  "breadcrumbs.enabled": false,
 
   // ===============================
-  // 🎨 Custom UI Styles (via Extension)
+  // Custom UI Styles
   // ===============================
   "custom-ui-style.electron": {
     "titleBarStyle": "hiddenInset",
@@ -183,17 +183,17 @@
   "custom-ui-style.font.sansSerif": "PlemolJP Console NF",
 
   // ===============================
-  // 🔗 File Association
+  // File Association
   // ===============================
   "files.associations": {
     ".env*": "dotenv"
   },
 
   // ===============================
-  // 🔗 Bun Configuration
+  // Bun Configuration
   // ===============================
-  "bun.runtime": "/path/to/bun", // The path to the `bun` executable.
-  "bun.debugTerminal.enabled": true, // If support for Bun should be added to the default "JavaScript Debug Terminal".
-  "bun.debugTerminal.stopOnEntry": false, // If the debugger should stop on the first line of the program.
-  "bun.test.filePattern": "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}" // Glob pattern to find test files. Defaults to the value shown below.
+  "bun.runtime": "/path/to/bun",
+  "bun.debugTerminal.enabled": true,
+  "bun.debugTerminal.stopOnEntry": false,
+  "bun.test.filePattern": "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}"
 }
