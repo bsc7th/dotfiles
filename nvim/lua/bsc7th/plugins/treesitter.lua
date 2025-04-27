@@ -33,6 +33,7 @@ return {
         "go",
         "graphql",
         "html",
+        "latex",
         "http",
         "javascript",
         "json",
