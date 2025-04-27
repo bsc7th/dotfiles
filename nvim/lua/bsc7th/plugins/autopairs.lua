@@ -12,10 +12,15 @@ return {
       ts_config = {
         lua = { "string" },
         javascript = { "template_string" },
+        typescript = { "template_string" },
+        go = { "string" },
+        python = { "string" },
         java = false,
         html = { "tag" },
         markdown = { "strong", "emph" },
       },
+      dissable_filetypes = { "text" },
+      check_bracket_line = true,
     })
 
     local cmp_autopairs = require("nvim-autopairs.completion.cmp")
