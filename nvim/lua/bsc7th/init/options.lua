@@ -1,5 +1,3 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
