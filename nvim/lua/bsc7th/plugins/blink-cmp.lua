@@ -4,6 +4,20 @@ return {
     version = "1.*",
     dependencies = {
       "rafamadriz/friendly-snippets",
+
+      {
+        "L3MON4D3/LuaSnip",
+        build = function()
+          return "make install_jsregexp"
+        end,
+        dependencies = {
+          "rafamadriz/friendly-snippets",
+        },
+        config = function()
+          require("luasnip.loaders.from_vscode").lazy_load()
+        end,
+      },
+
       {
         "saghen/blink.compat",
         optional = true,
