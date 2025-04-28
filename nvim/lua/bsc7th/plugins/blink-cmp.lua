@@ -6,15 +6,14 @@ return {
       "rafamadriz/friendly-snippets",
 
       {
-        "L3MON4D3/LuaSnip",
-        build = function()
-          return "make install_jsregexp"
-        end,
-        dependencies = {
-          "rafamadriz/friendly-snippets",
-        },
+        "echasnovski/mini.snippets",
         config = function()
-          require("luasnip.loaders.from_vscode").lazy_load()
+          require("mini.snippets").setup({
+            snippets = { preset = "mini_snippets" },
+            sources = {
+              default = { "lsp", "path", "snippets", "buffer" },
+            },
+          })
         end,
       },
 
