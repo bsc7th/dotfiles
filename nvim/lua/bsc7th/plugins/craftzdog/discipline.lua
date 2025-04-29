@@ -11,10 +11,12 @@ function M.cowboy()
       if vim.v.count > 0 then
         count = 0
       end
-      if count >= 10 and vim.bo.buftype ~= "nofile" then
-        ok = pcall(vim.notify, "Lakad matatag!", vim.log.levels.WARN, {
-          icon = "🤠",
-          id = "cowboy",
+      if count >= 3 and vim.bo.buftype ~= "nofile" then
+        ok = pcall(vim.notify, "💬 Lakad matatag!", vim.log.levels.WARN, {
+          -- NOTE: Embedded emoji directly in the message since the default vim.notify doesn't support 'icon' without a plugin like nvim-notify.
+          -- If you're using nvim-notify, you can uncomment 'icon' and 'id' below to enable richer notifications.
+          -- icon = "💬",
+          -- id = "cowboy",
           keep = function()
             return count >= 3
           end,
@@ -24,7 +26,7 @@ function M.cowboy()
         end
       else
         count = count + 1
-        timer:start(2000, 0, function()
+        timer:start(5000, 0, function()
           count = 0
         end)
         return map
