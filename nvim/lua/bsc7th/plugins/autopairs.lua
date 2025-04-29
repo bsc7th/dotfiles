@@ -10,14 +10,14 @@ return {
     autopairs.setup({
       check_ts = true,
       ts_config = {
+        markdown = { "strong", "emph" },
+        html = { "tag" },
         lua = { "string" },
         javascript = { "template_string" },
         typescript = { "template_string" },
         go = { "string" },
         python = { "string" },
         java = false,
-        html = { "tag" },
-        markdown = { "strong", "emph" },
       },
       dissable_filetypes = { "text" },
       check_bracket_line = true,
