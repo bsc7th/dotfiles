@@ -1,5 +1,5 @@
 local M = {}
-local LazyvimUtil = require("lazyvim.util")
+local LazyvimUtil = require("util.debug")
 
 function M.toggleInlayHints()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
