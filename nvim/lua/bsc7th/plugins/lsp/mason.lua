@@ -23,29 +23,29 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-        "astro",
-        "cssls",
-        "emmet_ls",
-        "graphql",
         "html",
-        "lua_ls",
-        "prismals",
-        "pyright",
-        "svelte",
-        "ts_ls",
+        "cssls",
         "tailwindcss",
+        "lua_ls",
+        "ts_ls",
+        "astro",
+        "svelte",
+        "emmet_ls",
+        "pyright",
+        "graphql",
+        "prismals",
       },
       automatic_installation = true,
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "black",
-        "eslint_d",
-        "isort",
         "prettier",
-        "pylint",
+        "eslint_d",
         "stylua",
+        "pylint",
+        "black",
+        "isort",
       },
     })
   end,
