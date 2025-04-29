@@ -104,14 +104,14 @@ return {
         swap = {
           enable = true,
           swap_next = {
-            ["<leader>na"] = "@parameter.inner",
-            ["<leader>n:"] = "@property.outer",
-            ["<leader>nm"] = "@function.outer",
+            ["<leader>si"] = "@parameter.inner",
+            ["<leader>so"] = "@property.outer",
+            ["<leader>sfo"] = "@function.outer",
           },
           swap_previous = {
-            ["<leader>pa"] = "@parameter.inner",
-            ["<leader>p:"] = "@property.outer",
-            ["<leader>pm"] = "@function.outer",
+            ["<leader>spi"] = "@parameter.inner",
+            ["<leader>spo"] = "@property.outer",
+            ["<leader>spf"] = "@function.outer",
           },
         },
         move = {
