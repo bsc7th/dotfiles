@@ -6,20 +6,20 @@ return {
 
     conform.setup({
       formatters_by_ft = {
+        markdown = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        lua = { "stylua" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
         typescriptreact = { "prettier" },
         svelte = { "prettier" },
-        css = { "prettier" },
-        html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
-        markdown = { "prettier" },
+        python = { "isort", "black" },
         graphql = { "prettier" },
         liquid = { "prettier" },
-        lua = { "stylua" },
-        python = { "isort", "black" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -28,7 +28,7 @@ return {
       },
     })
 
-    vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+    vim.keymap.set({ "n", "v" }, "<leader>pf", function()
       conform.format({
         lsp_fallback = true,
         async = true,
