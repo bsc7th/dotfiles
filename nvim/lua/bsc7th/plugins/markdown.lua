@@ -4,8 +4,8 @@ return {
     name = "render-markdown",
     config = function()
       require("render-markdown").setup({
-        latex = { enabled = false },
         html = { enabled = false },
+        latex = { enabled = false },
       })
     end,
   },
