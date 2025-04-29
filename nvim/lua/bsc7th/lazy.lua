@@ -1,3 +1,8 @@
+-- Enable vim.loader early if it's available
+if vim.loader then
+  vim.loader.enable()
+end
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -24,10 +29,6 @@ require("lazy").setup({
     notify = false,
   },
 })
-
-if vim.loader then
-  vim.loader.enable()
-end
 
 require("bsc7th.plugins.util.debug")
 _G.dd = function(...)
