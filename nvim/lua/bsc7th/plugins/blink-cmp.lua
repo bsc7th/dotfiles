@@ -23,7 +23,12 @@ return {
       },
     },
     opts = {
-      keymap = { preset = "default" },
+      keymap = {
+        preset = "enter",
+        ["<CR>"] = { "select_and_accept" },
+        ["<Tab>"] = { "select_next" },
+        ["<S-Tab>"] = { "select_prev" },
+      },
       appearance = {
         use_nvim_cmp_as_default = true,
         nerd_font_variant = "mono",
