@@ -32,7 +32,12 @@ vim.opt.cmdheight = vim.fn.has("nvim-0.8") == 1 and 0 or 1
 vim.opt.formatoptions:append({ "r" })
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "fzf-lua"
-vim.g.lazyvim_cmp = "blink.cmp"
+
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
+vim.cmd("set t_ZH=[3m")
+vim.cmd("set t_ZR=[23m")
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.astro",
