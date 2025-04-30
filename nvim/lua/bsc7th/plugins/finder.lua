@@ -25,7 +25,7 @@ return {
   {
     "ibhagwan/fzf-lua",
     event = "VeryLazy",
-    dependencies = { "echasnovski/mini.icons", "echasnovski/mini.fuzzy", "nvim-lua/plenary.nvim" },
+    dependencies = { "echasnovski/mini.icons", "nvim-lua/plenary.nvim" },
     keys = {
       {
         "<leader>fc",
