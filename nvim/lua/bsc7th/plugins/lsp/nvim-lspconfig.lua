@@ -12,6 +12,12 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     local keymap = vim.keymap
 
+    local function setup_lsp_server(server_name, opts)
+      opts = opts or {}
+      opts.capabilities = capabilities
+      lspconfig[server_name].setup(opts)
+    end
+
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
@@ -48,19 +54,17 @@ return {
 
     mason_lspconfig.setup_handlers({
       function(server_name)
-        lspconfig[server_name].setup({ capabilities = capabilities })
+        setup_lsp_server(server_name)
       end,
 
       ["graphql"] = function()
-        lspconfig["graphql"].setup({
-          capabilities = capabilities,
+        setup_lsp_server("graphql", {
           filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
         })
       end,
 
       ["emmet_ls"] = function()
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
+        setup_lsp_server("emmet_ls", {
           filetypes = {
             "html", "typescriptreact", "javascriptreact",
             "css", "sass", "scss", "less",
@@ -69,8 +73,7 @@ return {
       end,
 
       ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
+        setup_lsp_server("lua_ls", {
           settings = {
             Lua = {
               diagnostics = { globals = { "vim" } },
