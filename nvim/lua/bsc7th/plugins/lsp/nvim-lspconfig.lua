@@ -51,25 +51,10 @@ return {
         lspconfig[server_name].setup({ capabilities = capabilities })
       end,
 
-      ["svelte"] = function()
-        lspconfig["svelte"].setup({
-          capabilities = capabilities,
-          on_attach = function(client, bufnr)
-            vim.api.nvim_create_autocmd("BufWritePost", {
-              pattern = { "*.js", "*.ts" },
-              callback = function(ctx)
-                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-              end,
-            })
-          end,
-          filetypes = { "svelte", "html", "javascript", "typescript" },
-        })
-      end,
-
       ["graphql"] = function()
         lspconfig["graphql"].setup({
           capabilities = capabilities,
-          filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact", "svelte" },
+          filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
         })
       end,
 
@@ -78,7 +63,7 @@ return {
           capabilities = capabilities,
           filetypes = {
             "html", "typescriptreact", "javascriptreact",
-            "css", "sass", "scss", "less", "svelte"
+            "css", "sass", "scss", "less",
           },
         })
       end,
