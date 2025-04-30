@@ -38,3 +38,13 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 vim.cmd("set t_ZH=[3m")
 vim.cmd("set t_ZR=[23m")
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.astro",
+  command = "setfiletype astro",
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.svelte",
+  command = "setfiletype svelte",
+})
