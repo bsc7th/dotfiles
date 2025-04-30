@@ -13,12 +13,16 @@ function M.is_next_project()
   return vim.fn.filereadable("next.config.js") == 1 or vim.fn.filereadable("next.config.ts") == 1
 end
 
-function M.is_node_project()
+function M.is_npm_project()
   return vim.fn.filereadable("package.json") == 1
 end
 
 function M.is_bun_project()
   return vim.fn.filereadable("bun.lockb") == 1
+end
+
+function M.is_node_project()
+  return vim.fn.filereadable("package.json") == 1
 end
 
 return M
