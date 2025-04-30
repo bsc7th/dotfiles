@@ -22,7 +22,16 @@ return {
     local function handle_bun_project(server_name, opts)
       if project.is_bun_project() then
         vim.notify("🤠 Yeehaw! Bun project detected, adjusting LSP for " .. server_name, vim.log.levels.INFO)
+        opts = opts or {}
+        setup_lsp_server(server_name, opts)
+      else
+        setup_lsp_server(server_name, opts)
+      end
+    end
 
+    local function handle_npm_project(server_name, opts)
+      if project.is_npm_project() then
+        vim.notify("🚀 NPM project detected, adjusting LSP for " .. server_name, vim.log.levels.INFO)
         opts = opts or {}
         setup_lsp_server(server_name, opts)
       else
@@ -66,11 +75,16 @@ return {
 
     mason_lspconfig.setup_handlers({
       function(server_name)
+        -- First check for Bun, then for NPM
         handle_bun_project(server_name)
+        handle_npm_project(server_name)
       end,
 
       ["graphql"] = function()
         handle_bun_project("graphql", {
+          filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
+        })
+        handle_npm_project("graphql", {
           filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
         })
       end,
@@ -82,10 +96,24 @@ return {
             "css", "sass", "scss", "less",
           },
         })
+        handle_npm_project("emmet_ls", {
+          filetypes = {
+            "html", "typescriptreact", "javascriptreact",
+            "css", "sass", "scss", "less",
+          },
+        })
       end,
 
       ["lua_ls"] = function()
         handle_bun_project("lua_ls", {
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim" } },
+              completion = { callSnippet = "Replace" },
+            },
+          },
+        })
+        handle_npm_project("lua_ls", {
           settings = {
             Lua = {
               diagnostics = { globals = { "vim" } },
