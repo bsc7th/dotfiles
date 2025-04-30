@@ -1,4 +1,3 @@
--- Enable vim.loader early if it's available
 if vim.loader then
   vim.loader.enable()
 end
