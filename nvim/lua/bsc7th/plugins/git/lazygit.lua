@@ -1,20 +1,20 @@
 return {
-  "kdheepak/lazygit.nvim", -- Plugin that integrates LazyGit (a terminal UI for Git) into Neovim
+  "kdheepak/lazygit.nvim",
   cmd = {
-    "LazyGit", -- Opens LazyGit UI
-    "LazyGitConfig", -- Opens LazyGit with Git config view
-    "LazyGitCurrentFile", -- LazyGit focused on the current file
-    "LazyGitFilter", -- Filter commits in LazyGit
-    "LazyGitFilterCurrentFile", -- Filter commits of the current file
+    "LazyGit",
+    "LazyGitConfig",
+    "LazyGitCurrentFile",
+    "LazyGitFilter",
+    "LazyGitFilterCurrentFile",
   },
   dependencies = {
-    "nvim-lua/plenary.nvim", -- Required dependency that provides Lua utility functions
+    "nvim-lua/plenary.nvim",
   },
   keys = {
     {
       "<leader>lg",
       "<cmd>LazyGit<cr>",
-      desc = "Open lazy git", -- Keybinding to open LazyGit with <leader>lg
+      desc = "Open lazy git",
     },
   },
 }
