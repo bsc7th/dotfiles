@@ -3,8 +3,11 @@ return {
   version = "*",
   config = function()
     require("mini.pairs").setup({
-      -- Your custom options go here
-      modes = { insert = true, command = false, terminal = false },
+      modes = { insert = true, command = true, terminal = false },
+      skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+      skip_ts = { "string" },
+      skip_unbalanced = true,
+      markdown = true,
       mappings = {
         ["("] = { action = "open", pair = "()", neigh_pattern = "[^\\]." },
         ["["] = { action = "open", pair = "[]", neigh_pattern = "[^\\]." },
