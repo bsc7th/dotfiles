@@ -11,11 +11,23 @@ return {
     local lspconfig = require("lspconfig")
     local mason_lspconfig = require("mason-lspconfig")
     local keymap = vim.keymap
+    local project = require("bsc7th.plugins.util.project-type")
 
     local function setup_lsp_server(server_name, opts)
       opts = opts or {}
       opts.capabilities = capabilities
       lspconfig[server_name].setup(opts)
+    end
+
+    local function handle_bun_project(server_name, opts)
+      if project.is_bun_project() then
+        vim.notify("🤠 Yeehaw! Bun project detected, adjusting LSP for " .. server_name, vim.log.levels.INFO)
+
+        opts = opts or {}
+        setup_lsp_server(server_name, opts)
+      else
+        setup_lsp_server(server_name, opts)
+      end
     end
 
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -54,17 +66,17 @@ return {
 
     mason_lspconfig.setup_handlers({
       function(server_name)
-        setup_lsp_server(server_name)
+        handle_bun_project(server_name)
       end,
 
       ["graphql"] = function()
-        setup_lsp_server("graphql", {
+        handle_bun_project("graphql", {
           filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
         })
       end,
 
       ["emmet_ls"] = function()
-        setup_lsp_server("emmet_ls", {
+        handle_bun_project("emmet_ls", {
           filetypes = {
             "html", "typescriptreact", "javascriptreact",
             "css", "sass", "scss", "less",
@@ -73,7 +85,7 @@ return {
       end,
 
       ["lua_ls"] = function()
-        setup_lsp_server("lua_ls", {
+        handle_bun_project("lua_ls", {
           settings = {
             Lua = {
               diagnostics = { globals = { "vim" } },
