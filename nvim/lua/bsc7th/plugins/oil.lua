@@ -1,6 +1,7 @@
 return {
   {
     "stevearc/oil.nvim",
+    lazy = true,
     dependencies = { "echasnovski/mini.icons" },
     config = function()
       CustomOilBar = function()
