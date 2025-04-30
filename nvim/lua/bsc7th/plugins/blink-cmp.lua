@@ -4,17 +4,17 @@ return {
     version = "1.*",
     dependencies = {
       "rafamadriz/friendly-snippets",
-      {
-        "echasnovski/mini.snippets",
-        config = function()
-          require("mini.snippets").setup({
-            snippets = { preset = "mini_snippets" },
-            sources = {
-              default = { "lsp", "path", "snippets", "buffer" },
-            },
-          })
-        end,
-      },
+      -- {
+      --   "echasnovski/mini.snippets",
+      --   config = function()
+      --     require("mini.snippets").setup({
+      --       snippets = { preset = "mini_snippets" },
+      --       sources = {
+      --         default = { "lsp", "path", "snippets", "buffer" },
+      --       },
+      --     })
+      --   end,
+      -- },
       {
         "saghen/blink.compat",
         optional = true,
