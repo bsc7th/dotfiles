@@ -9,10 +9,6 @@ return {
       "nvim-neotest/neotest-plenary",
     },
     opts = {
-      -- Can be a list of adapters like what neotest expects,
-      -- or a list of adapter names,
-      -- or a table of adapter names, mapped to adapter configs.
-      -- The adapter will then be automatically loaded with the config.
       adapters = {
         ["neotest-plenary"] = {},
         ["neotest-jest"] = {
@@ -123,16 +119,63 @@ return {
 
       require("neotest").setup(opts)
     end,
-    -- stylua: ignore
     keys = {
-      { ";tt", function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run File" },
-      { ";tr", function() require("neotest").run.run() end, desc = "Run Nearest" },
-      { ";tT", function() require("neotest").run.run(vim.loop.cwd()) end, desc = "Run All Test Files" },
-      { ";tl", function() require("neotest").run.run_last() end, desc = "Run Last" },
-      { ";ts", function() require("neotest").summary.toggle() end, desc = "Toggle Summary" },
-      { ";to", function() require("neotest").output.open({ enter = true, auto_close = true }) end, desc = "Show Output" },
-      { ";tO", function() require("neotest").output_panel.toggle() end, desc = "Toggle Output Panel" },
-      { ";tS", function() require("neotest").run.stop() end, desc = "Stop" },
+      {
+        ";tt",
+        function()
+          require("neotest").run.run(vim.fn.expand("%"))
+        end,
+        desc = "Run File",
+      },
+      {
+        ";tr",
+        function()
+          require("neotest").run.run()
+        end,
+        desc = "Run Nearest",
+      },
+      {
+        ";tT",
+        function()
+          require("neotest").run.run(vim.loop.cwd())
+        end,
+        desc = "Run All Test Files",
+      },
+      {
+        ";tl",
+        function()
+          require("neotest").run.run_last()
+        end,
+        desc = "Run Last",
+      },
+      {
+        ";ts",
+        function()
+          require("neotest").summary.toggle()
+        end,
+        desc = "Toggle Summary",
+      },
+      {
+        ";to",
+        function()
+          require("neotest").output.open({ enter = true, auto_close = true })
+        end,
+        desc = "Show Output",
+      },
+      {
+        ";tO",
+        function()
+          require("neotest").output_panel.toggle()
+        end,
+        desc = "Toggle Output Panel",
+      },
+      {
+        ";tS",
+        function()
+          require("neotest").run.stop()
+        end,
+        desc = "Stop",
+      },
     },
   },
 }
