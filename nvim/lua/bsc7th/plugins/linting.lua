@@ -6,7 +6,7 @@ return {
   },
   config = function()
     local lint = require("lint")
-    local project = require("bsc7th.plugins.util.project-type")
+    local project = require("bsc7th.plugins.util.projecttypes")
 
     local linters_by_ft = {
       javascript = { "eslint_d" },
