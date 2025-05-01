@@ -13,7 +13,7 @@ return {
         local modified = vim.bo[props.buf].modified
         local buffer = {
           " ",
-          { filename, gui = modified and "bold,italic" or "bold" },
+          { filename, gui = modified and "bold,italic" or "italic" },
           " ",
           guifg = "#000000",
           guibg = "#c3e88d",
