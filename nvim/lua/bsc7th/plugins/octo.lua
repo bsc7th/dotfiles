@@ -16,7 +16,7 @@ return {
       ssh_aliases = {}, -- SSH aliases. e.g. `ssh_aliases = {["github.com-work"] = "github.com"}`
       picker = "fzf-lua", -- or "fzf-lua"
       picker_config = {
-        use_emojis = false, -- only used by "fzf-lua" picker for now
+        use_emojis = true, -- only used by "fzf-lua" picker for now
         mappings = { -- mappings for the pickers
           open_in_browser = { lhs = "<C-b>", desc = "open issue in browser" },
           copy_url = { lhs = "<C-y>", desc = "copy url to system clipboard" },
