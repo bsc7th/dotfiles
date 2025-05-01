@@ -29,9 +29,9 @@ require("lazy").setup({
   },
 })
 
-require("bsc7th.plugins.util.debug")
+local debug = require("bsc7th.plugins.util.debug")
 _G.dd = function(...)
-  require("bsc7th.plugins.util.debug").dump(...)
+  debug.dump(...)
 end
 vim.print = _G.dd
 
