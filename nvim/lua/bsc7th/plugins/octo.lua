@@ -3,7 +3,7 @@ return {
   requires = {
     "nvim-lua/plenary.nvim",
     "ibhagwan/fzf-lua",
-    "echasnovski/mini.icons",
+    "nvim-tree/nvim-web-devicons",
   },
   cmd = { "Octo", "Octo pr", "Octo issue" },
   config = function()
