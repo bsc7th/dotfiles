@@ -2,11 +2,10 @@ return {
   "pwntester/octo.nvim",
   requires = {
     "nvim-lua/plenary.nvim",
-    -- "nvim-telescope/telescope.nvim",
     "ibhagwan/fzf-lua",
-    -- "nvim-tree/nvim-web-devicons",
     "echasnovski/mini.icons",
   },
+  cmd = { "Octo", "Octo pr", "Octo issue" },
   config = function()
     require("octo").setup({
       use_local_fs = false, -- use local files on right side of reviews
