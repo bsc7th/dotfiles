@@ -10,7 +10,7 @@ return {
           })
         end,
         mode = "v",
-        desc = "Refactor: Select",
+        desc = "Refactor",
       },
     },
   },
