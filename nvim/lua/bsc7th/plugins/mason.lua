@@ -1,5 +1,6 @@
 return {
   "williamboman/mason.nvim",
+  event = "VeryLazy",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -15,9 +16,12 @@ return {
           package_installed = "✓",
           package_pending = "➜",
           package_uninstalled = "✗",
+          -- NOTE: Disable unnecessary logs/UI in mason.setup()
+          check_outdated_packages_on_open = false,
         },
         border = "none",
       },
+      log_level = vim.log.levels.WARN,
     })
 
     mason_lspconfig.setup({
