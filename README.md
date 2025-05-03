@@ -1,9 +1,5 @@
 # bsc7th's dotfiles
 
-## Well-Maintained & Up-to-Date
-
-This project is actively maintained with the latest features, bug fixes, and improvements. All deprecated dependencies have been removed, ensuring a smooth, modern development experience. Keep your workflow fresh and optimized!
-
 ## Lakad Matatag: A Special Highlight in My Config
 
 Inspired by Folke’s plugin and styled using syntax borrowed from craftzdog, this section holds a personal touch in my setup.
