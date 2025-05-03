@@ -1,7 +1,3 @@
-if vim.loader then
-  vim.loader.enable()
-end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -15,24 +11,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  { import = "bsc7th.plugins" },
-  { import = "bsc7th.plugins.lsp" },
-  { import = "bsc7th.plugins.git" },
-}, {
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    notify = false,
-  },
-})
-
-local debug = require("bsc7th.plugins.util.debug")
-_G.dd = function(...)
-  debug.dump(...)
-end
-vim.print = _G.dd
-
-require("bsc7th.plugins.craftzdog.discipline").cowboy()
+require("lazy").setup("bsc7th.plugins")

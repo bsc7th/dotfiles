@@ -1,13 +1,9 @@
 return {
-  {
-    "MeanderingProgrammer/markdown.nvim",
-    name = "render-markdown",
-    ft = { "markdown" },
-    config = function()
-      require("render-markdown").setup({
-        html = { enabled = false },
-        latex = { enabled = false },
-      })
-    end,
+  "MeanderingProgrammer/markdown.nvim",
+  name = "render-markdown",
+  ft = { "markdown" },
+  opts = {
+    html = { enabled = false },
+    latex = { enabled = false },
   },
 }

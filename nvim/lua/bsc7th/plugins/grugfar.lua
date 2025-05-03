@@ -2,10 +2,9 @@ return {
   "MagicDuck/grug-far.nvim",
   lazy = true,
   opts = { headerMaxWidth = 80 },
-  cmd = "GrugFar",
   keys = {
     {
-      "<leader>sr",
+      "<leader>gf",
       function()
         local grug = require("grug-far")
         local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")

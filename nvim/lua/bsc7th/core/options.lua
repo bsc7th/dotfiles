@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.opt.shortmess:append("I")
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.tabstop = 2
@@ -28,23 +27,6 @@ vim.opt.hlsearch = true
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.opt.swapfile = false
-vim.opt.cmdheight = vim.fn.has("nvim-0.8") == 1 and 0 or 1
+
+vim.opt.shortmess:append("I")
 vim.opt.formatoptions:append({ "r" })
-vim.g.lazyvim_prettier_needs_config = true
-vim.g.lazyvim_picker = "fzf-lua"
-
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
-
-vim.cmd("set t_ZH=[3m")
-vim.cmd("set t_ZR=[23m")
-
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.astro",
-  command = "setfiletype astro",
-})
-
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.svelte",
-  command = "setfiletype svelte",
-})
