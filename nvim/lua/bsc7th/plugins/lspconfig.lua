@@ -70,8 +70,8 @@ return {
         setup_lsp_server(server_name, {})
       end,
 
-      ["tsserver"] = function()
-        setup_lsp_server("tsserver", {
+      ["ts_ls"] = function()
+        setup_lsp_server("ts_ls", {
           filetypes = { "typescript", "typescriptreact", "javascriptreact" },
         })
       end,
