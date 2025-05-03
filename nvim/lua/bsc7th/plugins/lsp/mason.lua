@@ -16,6 +16,7 @@ return {
           package_pending = "➜",
           package_uninstalled = "✗",
         },
+        border = "none",
       },
     })
 
@@ -23,13 +24,9 @@ return {
       ensure_installed = {
         "html",
         "cssls",
-        "tailwindcss",
         "lua_ls",
         "ts_ls",
-        "astro",
-        "svelte",
         "emmet_ls",
-        "pyright",
         "graphql",
         "prismals",
       },
@@ -41,9 +38,6 @@ return {
         "prettier",
         "eslint_d",
         "stylua",
-        "pylint",
-        "black",
-        "isort",
       },
     })
   end,
