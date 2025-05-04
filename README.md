@@ -31,7 +31,7 @@ If you're new to Neovim, I highly recommend watching his [videos](https://www.yo
 
 ### [Mateo Sindičić (JazzyGrim / Sindo)](https://github.com/JazzyGrim/dotfiles/)
 
-![rest.nvim](assets/rest-nvim.jpeg)
+![rest.nvim](assets/rest.jpeg)
 
 I discovered plugins like [`rest.nvim`](https://github.com/rest-nvim/rest.nvim) and [`neotest`](https://github.com/nvim-neotest/neotest) thanks to his [YouTube video](https://www.youtube.com/watch?v=V070Zmvx9AM).  
 His content introduced me to the idea of integrating testing into my daily workflow, even for small projects like my blog. I also learned how to send HTTP requests directly from Neovim using `rest.nvim`, which has become a surprisingly useful part of my toolkit.
@@ -49,7 +49,7 @@ As I grow and learn, I continue refining and improving this setup to better supp
 
 ## Exploring VSCode
 
-![bsc7th-vscode](assets/vs-code.jpeg)
+![bsc7th-vscode](assets/vscode.jpeg)
 
 ### [Igor Babko](https://github.com/IgorBabko/)
 
