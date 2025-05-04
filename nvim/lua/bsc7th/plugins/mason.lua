@@ -1,7 +1,7 @@
 return {
   "williamboman/mason.nvim",
   -- NOTE: Lazy-loaded: tools won't auto-install. Run :Mason and install manually, or remove (event = "VeryLazy") line to auto-install on startup.
-  event = "VeryLazy",
+  -- event = "VeryLazy",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
