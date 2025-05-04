@@ -66,6 +66,7 @@ return {
             local ok, dap = pcall(require, "dap")
             return ok and dap.status() ~= "" and ("  " .. dap.status()) or ""
           end,
+          -- Lazy updates
           {
             function()
               local lazy = require("lazy.status")
@@ -75,9 +76,10 @@ return {
               return require("lazy.status").has_updates()
             end,
             color = function()
-              return { fg = "#FFD700" } -- Use your highlight group or hex
+              return { fg = "#FFD700" }
             end,
           },
+          -- Git diff
           {
             "diff",
             symbols = icons.git,
@@ -92,6 +94,35 @@ return {
               end
             end,
           },
+          -- Neotest status
+          function()
+            local ok, neotest = pcall(require, "neotest")
+            if not ok then
+              return ""
+            end
+            local status = neotest.status.summary()
+            if status.running then
+              return " running"
+            elseif status.failed > 0 then
+              return " " .. status.failed .. " failed"
+            elseif status.passed > 0 then
+              return " " .. status.passed .. " passed"
+            else
+              return ""
+            end
+          end,
+          -- LSP clients
+          function()
+            local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+            if #clients == 0 then
+              return " No LSP"
+            end
+            local names = {}
+            for _, client in ipairs(clients) do
+              table.insert(names, client.name)
+            end
+            return " " .. table.concat(names, ", ")
+          end,
         },
         lualine_y = {
           { "progress", separator = " ", padding = { left = 1, right = 0 } },
