@@ -15,7 +15,7 @@ return {
       markdown = { "prettier" },
       liquid = { "prettier" },
       lua = { "stylua" },
-      go = { "gofmt", "golines" },
+      go = { "gofmt", "golines", "shfmt" },
     },
     format_on_save = {
       lsp_fallback = true,
