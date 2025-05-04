@@ -34,7 +34,7 @@ return {
         "emmet_ls",
         "graphql",
         "prismals",
-        "htmx-lsp",
+        "htmx",
         "gopls", -- NOTE: Ensure go is installed in your system or else you get an error! `brew install go`
       },
       automatic_installation = true,
