@@ -111,18 +111,6 @@ return {
               return ""
             end
           end,
-          -- LSP clients
-          function()
-            local clients = vim.lsp.get_clients({ bufnr = 0 })
-            if #clients == 0 then
-              return " No LSP"
-            end
-            local names = {}
-            for _, client in ipairs(clients) do
-              table.insert(names, client.name)
-            end
-            return " " .. table.concat(names, ", ")
-          end,
         },
         lualine_y = {
           { "progress", separator = " ", padding = { left = 1, right = 0 } },
