@@ -1,0 +1,45 @@
+# 📝 Conventional Commit Template (Professional + Funky Edition)
+
+<type>(<scope>): <subject> [optional emoji]
+
+# 🧠 Examples:
+# feat(auth): add OAuth2 support 🔐
+# fix(lsp): replace deprecated get_active_clients API 🛠️
+# docs(contrib): added cowboy-style conventional commits guide 🤠
+# style(ui): fix indentation and spacing 🎨
+# refactor(core): split logic into smaller functions 🧼
+# perf(api): optimize response time from 500ms to 100ms ⚡️
+# test(utils): add unit tests for string helpers 🧪
+# build(vite): update build script to support Bun 🏗️
+# ci(actions): fix GitHub Actions deploy step 🛠️
+# chore(deps): bump React to v18 🚀
+# revert(ui): revert theme change due to regressions 🔙
+
+# ----------------------------
+# ✅ Official Commit Types:
+# - feat:      A new feature
+# - fix:       A bug fix
+# - docs:      Documentation only changes
+# - style:     Changes that do not affect the meaning of the code (formatting)
+# - refactor:  A code change that neither fixes a bug nor adds a feature
+# - perf:      A code change that improves performance
+# - test:      Adding missing tests or correcting existing ones
+# - build:     Changes that affect the build system or external dependencies
+# - ci:        Changes to CI configuration files and scripts
+# - chore:     Maintenance or tasks that don’t affect production code
+# - revert:    Reverts a previous commit
+
+# 🎯 Optional Scope:
+# Specify the part of the codebase affected in parentheses.
+# Example: feat(blog), fix(lsp), chore(dotfiles)
+
+# 🤓 Guidelines:
+# - Limit subject line to 72 characters
+# - Use the imperative mood: "add" not "added"
+# - Leave a blank line between subject and body (if writing a long commit)
+# - Use body to explain *why* the change was made
+
+# 💡 Bonus Funky Flair (optional emojis):
+# 🌟 🎉 🔥 🤠 🎯 ⚡️ 🧪 🎨 🧼 🛠️ 🚀 🔙 🧘‍♂️ 🐛 🐎 🏁 🧠 🔐
+
+# 🤝 Ride clean, write clear, and let your commits tell a story.
