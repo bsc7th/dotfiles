@@ -40,7 +40,7 @@ His content introduced me to the idea of integrating testing into my daily workf
 
 This configuration is tailored for my current tech stack and goals:
 
-- Primarily focused on frontend development using **React** and **Astro**
+- Primarily focused on frontend development using **HTMX**, **React**,and **Astro**
 - Some backend work using **Go (Golang)**
 
 As I grow and learn, I continue refining and improving this setup to better support my workflow.
