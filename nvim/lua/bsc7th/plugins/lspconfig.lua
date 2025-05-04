@@ -98,12 +98,6 @@ return {
           },
         })
       end,
-
-      ["htmx-lsp"] = function()
-        setup_lsp_server("htmx-lsp", {
-          filetypes = { "html" },
-        })
-      end,
     })
   end,
 }
