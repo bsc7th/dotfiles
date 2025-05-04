@@ -1,6 +1,6 @@
 # bsc7th Dotfiles
 
-![Neovim Performace](assets/neovim-performace.jpeg)
+![Neovim Performace](assets/neovim-performance.jpeg)
 
 Welcome to my personal dotfiles, the configuration I use daily as I continue my journey in web development. This setup evolves as I learn and discover better tools and workflows.
 
