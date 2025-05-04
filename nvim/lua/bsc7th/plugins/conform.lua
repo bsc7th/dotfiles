@@ -19,8 +19,8 @@ return {
     },
     format_on_save = {
       lsp_fallback = true,
-      async = false,
-      timeout_ms = 1000,
+      async = true,
+      timeout_ms = 500,
     },
   },
   config = function(_, opts)
@@ -40,5 +40,12 @@ return {
         timeout_ms = 3000,
       })
     end, { desc = "Format file or range (in visual mode)" })
+
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = vim.api.nvim_create_augroup("format_on_save", { clear = true }),
+      callback = function()
+        conform.format()
+      end,
+    })
   end,
 }
