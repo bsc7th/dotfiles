@@ -34,6 +34,7 @@ return {
         "emmet_ls",
         "graphql",
         "prismals",
+        "gopls",
       },
       automatic_installation = true,
     })
