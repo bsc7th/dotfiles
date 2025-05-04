@@ -49,7 +49,7 @@ As I grow and learn, I continue refining and improving this setup to better supp
 
 ## Exploring VSCode
 
-![bsc7th-vscode](assets/bsc7th-vscode.jpeg)
+![bsc7th-vscode](assets/vscode.jpeg)
 
 ### [Igor Babko](https://github.com/IgorBabko/)
 
