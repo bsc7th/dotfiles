@@ -9,6 +9,7 @@ return {
       typescript = { "prettier" },
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
+      astro = { "prettier", "prettier-plugin-astro" },
       json = { "prettier" },
       yaml = { "prettier" },
       graphql = { "prettier" },
