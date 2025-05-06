@@ -15,7 +15,7 @@ return {
         { filename, gui = modified and "bold,italic" or "italic" },
         " ",
         guifg = "#000000",
-        guibg = "#D33682",
+        guibg = "#98971a",
       }
       return buffer
     end,
