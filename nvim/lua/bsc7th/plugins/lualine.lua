@@ -79,7 +79,6 @@ return {
               return { fg = "#FFD700" }
             end,
           },
-          -- Git diff
           {
             "diff",
             symbols = icons.git,
@@ -94,7 +93,6 @@ return {
               end
             end,
           },
-          -- Neotest status
           function()
             local ok, neotest = pcall(require, "neotest")
             if not ok then
