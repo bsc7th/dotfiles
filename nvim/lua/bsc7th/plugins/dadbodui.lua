@@ -18,8 +18,10 @@ return {
     db_ui_use_nerd_fonts = 1,
   },
   config = function(_, opts)
-    for k, v in pairs(opts) do
-      vim.g[k] = v
+    if type(opts) == "table" then
+      for k, v in pairs(opts) do
+        vim.g[k] = v
+      end
     end
   end,
 }
