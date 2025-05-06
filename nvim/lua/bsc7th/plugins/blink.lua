@@ -1,6 +1,7 @@
 return {
   "saghen/blink.cmp",
   lazy = true,
+  enabled = true,
   version = "1.*",
   event = { "InsertEnter", "CmdlineEnter" },
   dependencies = {
@@ -18,9 +19,14 @@ return {
     appearance = {
       nerd_font_variant = "mono",
     },
-    signature = { enabled = true },
+    signature = {
+      enabled = true,
+    },
     fuzzy = {
       implementation = "prefer_rust_with_warning",
     },
   },
+  config = function(_, opts)
+    require("blink.cmp").setup(opts)
+  end,
 }
