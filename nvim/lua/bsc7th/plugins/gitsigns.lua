@@ -43,6 +43,7 @@ return {
       map("n", "]H", function()
         gs.nav_hunk("last")
       end, "Last Hunk")
+
       map("n", "[H", function()
         gs.nav_hunk("first")
       end, "First Hunk")
@@ -53,15 +54,25 @@ return {
       map("n", "<leader>ghu", gs.undo_stage_hunk, "Undo Stage Hunk")
       map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
       map("n", "<leader>ghp", gs.preview_hunk_inline, "Preview Hunk Inline")
+
       map("n", "<leader>ghb", function()
-        gs.blame_line({ full = true })
+        vim.defer_fn(function()
+          gs.blame_line({ full = true })
+        end, 0)
       end, "Blame Line")
+
       map("n", "<leader>ghB", gs.blame, "Blame Buffer")
       map("n", "<leader>ghd", gs.diffthis, "Diff This")
       map("n", "<leader>ghD", function()
         gs.diffthis("~")
       end, "Diff This ~")
+
       map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
+
+      map("n", "<leader>gtg", gs.toggle_signs, "Toggle GitSigns")
+      map("n", "<leader>glh", gs.toggle_linehl, "Toggle Line Highlight")
+      map("n", "<leader>gnh", gs.toggle_numhl, "Toggle Number Highlight")
+      map("n", "<leader>glb", gs.toggle_current_line_blame, "Toggle Current Line Blame")
     end,
   },
 }
