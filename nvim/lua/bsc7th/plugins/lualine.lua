@@ -149,6 +149,37 @@ return {
       end
     end
 
+    -- Gruvbox original mode colors
+    local gruvbox_custom = {
+      normal = {
+        a = { fg = "#1d2021", bg = "#d79921", gui = "bold" },
+        b = { fg = "#ebdbb2", bg = "#3c3836" },
+        c = { fg = "#ebdbb2", bg = "#282828" },
+      },
+      insert = {
+        a = { fg = "#1d2021", bg = "#b16286", gui = "bold" },
+        b = { fg = "#ebdbb2", bg = "#3c3836" },
+        c = { fg = "#ebdbb2", bg = "#282828" },
+      },
+      visual = {
+        a = { fg = "#1d2021", bg = "#98971a", gui = "bold" },
+        b = { fg = "#ebdbb2", bg = "#3c3836" },
+        c = { fg = "#ebdbb2", bg = "#282828" },
+      },
+      replace = {
+        a = { fg = "#1d2021", bg = "#689d6a", gui = "bold" },
+        b = { fg = "#ebdbb2", bg = "#3c3836" },
+        c = { fg = "#ebdbb2", bg = "#282828" },
+      },
+      inactive = {
+        a = { fg = "#a89984", bg = "#7c6f6f4", gui = "bold" },
+        b = { fg = "#a89984", bg = "#1d2021" },
+        c = { fg = "#a89984", bg = "#1d2021" },
+      },
+    }
+
+    opts.options.theme = gruvbox_custom
+
     return opts
   end,
 }
