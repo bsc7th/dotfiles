@@ -2,6 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = {
     "nvim-treesitter/nvim-treesitter-context",
+    "windwp/nvim-ts-autotag",
   },
   version = false,
   build = ":TSUpdate",
@@ -14,6 +15,7 @@ return {
   opts = {
     highlight = { enable = true },
     indent = { enable = true },
+    autotag = { enable = true },
     ensure_installed = {
       "html",
       "css",
@@ -68,6 +70,7 @@ return {
   },
   config = function(_, opts)
     require("nvim-treesitter.configs").setup(opts)
+    require("nvim-ts-autotag").setup()
     require("treesitter-context").setup({
       enabled = true,
       max_lines = 3,
