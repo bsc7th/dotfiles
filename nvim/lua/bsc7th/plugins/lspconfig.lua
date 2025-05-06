@@ -76,6 +76,18 @@ return {
         })
       end,
 
+      ["astro"] = function()
+        setup_lsp_server("astro", {
+          filetypes = { "astro", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+        })
+      end,
+
+      ["svelte"] = function()
+        setup_lsp_server("svelte", {
+          filetypes = { "svelte", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+        })
+      end,
+
       ["graphql"] = function()
         setup_lsp_server("graphql", {
           filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
