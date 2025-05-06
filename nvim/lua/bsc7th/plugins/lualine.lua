@@ -50,8 +50,12 @@ return {
             "diagnostics",
             symbols = icons.diagnostics,
           },
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { get_pretty_path },
+          {
+            "filetype",
+            icon_only = true,
+            separator = "",
+            padding = { left = 1, right = 0 },
+          },
         },
         lualine_x = {
           function()
@@ -66,7 +70,6 @@ return {
             local ok, dap = pcall(require, "dap")
             return ok and dap.status() ~= "" and ("  " .. dap.status()) or ""
           end,
-          -- Lazy updates
           {
             function()
               local lazy = require("lazy.status")
@@ -126,20 +129,23 @@ return {
     if vim.g.trouble_lualine then
       local ok, trouble = pcall(require, "trouble")
       if ok then
-        local symbols = trouble.statusline({
-          mode = "symbols",
-          groups = {},
-          title = false,
-          filter = { range = true },
-          format = "{kind_icon}{symbol.name:Normal}",
-          hl_group = "lualine_c_normal",
-        })
-        table.insert(opts.sections.lualine_c, {
-          symbols and symbols.get,
-          cond = function()
-            return vim.b.trouble_lualine ~= false and symbols.has()
-          end,
-        })
+        local symbols = trouble.statusline
+          and trouble.statusline({
+            mode = "symbols",
+            groups = {},
+            title = false,
+            filter = { range = true },
+            format = "{kind_icon}{symbol.name:Normal}",
+            hl_group = "lualine_c_normal",
+          })
+        if symbols then
+          table.insert(opts.sections.lualine_c, {
+            symbols.get,
+            cond = function()
+              return vim.b.trouble_lualine ~= false and symbols.has()
+            end,
+          })
+        end
       end
     end
 
