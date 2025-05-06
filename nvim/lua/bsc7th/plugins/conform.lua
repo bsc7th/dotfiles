@@ -1,5 +1,6 @@
 return {
   "stevearc/conform.nvim",
+  enabled = true,
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     formatters_by_ft = {
@@ -42,11 +43,13 @@ return {
       })
     end, { desc = "Format file or range (in visual mode)" })
 
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = vim.api.nvim_create_augroup("format_on_save", { clear = true }),
-      callback = function()
-        conform.format()
-      end,
-    })
+    if opts.format_on_save then
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = vim.api.nvim_create_augroup("format_on_save", { clear = true }),
+        callback = function()
+          conform.format()
+        end,
+      })
+    end
   end,
 }
