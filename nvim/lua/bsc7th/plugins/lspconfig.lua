@@ -6,6 +6,7 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/neodev.nvim", opts = {} },
     { "ibhagwan/fzf-lua" },
+    { "b0o/schemastore.nvim", lazy = true },
   },
   config = function()
     local capabilities = require("blink-cmp").get_lsp_capabilities()
@@ -85,6 +86,19 @@ return {
       ["svelte"] = function()
         setup_lsp_server("svelte", {
           filetypes = { "svelte", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+        })
+      end,
+
+      ["jsonls"] = function()
+        local schemastore = require("schemastore")
+
+        setup_lsp_server("jsonls", {
+          settings = {
+            json = {
+              schemas = schemastore.json.schemas(),
+              validate = { enable = true },
+            },
+          },
         })
       end,
 
