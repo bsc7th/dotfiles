@@ -73,7 +73,7 @@ return {
 
       ["ts_ls"] = function()
         setup_lsp_server("ts_ls", {
-          filetypes = { "typescript", "typescriptreact", "javascriptreact" },
+          filetypes = { "typescript", "typescriptreact" },
         })
       end,
 
@@ -85,7 +85,7 @@ return {
 
       ["svelte"] = function()
         setup_lsp_server("svelte", {
-          filetypes = { "svelte", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+          filetypes = { "svlete", ".*js", ".*ts" },
         })
       end,
 
@@ -104,7 +104,7 @@ return {
 
       ["graphql"] = function()
         setup_lsp_server("graphql", {
-          filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
+          filetypes = { "graphql", "gql", "javascript", "typescript", "typescriptreact", "javascriptreact" },
         })
       end,
 
