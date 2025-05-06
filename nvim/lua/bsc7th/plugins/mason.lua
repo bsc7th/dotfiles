@@ -17,7 +17,6 @@ return {
           package_installed = "✓",
           package_pending = "➜",
           package_uninstalled = "✗",
-          -- NOTE: Disable unnecessary logs/UI in mason.setup()
           check_outdated_packages_on_open = false,
         },
         border = "none",
@@ -31,11 +30,13 @@ return {
         "cssls",
         "lua_ls",
         "ts_ls",
+        "astro",
+        "svelte",
         "emmet_ls",
         "graphql",
         "prismals",
         "htmx",
-        "gopls", -- NOTE: Ensure go is installed in your system or else you get an error! `brew install go`
+        "gopls",
       },
       automatic_installation = true,
     })
