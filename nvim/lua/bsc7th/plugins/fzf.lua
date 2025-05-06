@@ -1,5 +1,6 @@
 return {
   "ibhagwan/fzf-lua",
+  enabled = true,
   event = "VeryLazy",
   dependencies = { "echasnovski/mini.icons" },
 
@@ -122,7 +123,7 @@ return {
         cwd = cwd,
         actions = {
           ["default"] = function(selected)
-            vim.cmd("Oil --float " .. cwd .. "/" .. selected[1])
+            vim.cmd("Oil --float " .. vim.fn.fnameescape(cwd) .. "/" .. selected[1])
           end,
         },
       })
