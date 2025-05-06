@@ -5,7 +5,7 @@ return {
     linters_by_ft = {
       javascript = { "eslint_d" },
       typescript = { "eslint_d" },
-      avascriptreact = { "eslint_d" },
+      javascriptreact = { "eslint_d" },
       typescriptreact = { "eslint_d" },
       astro = { "eslint_d" },
       go = { "golangci_lint" },
