@@ -7,11 +7,10 @@ return {
     columns = { "icon" },
     use_default_keymaps = true,
     delete_to_trash = false,
-    natural_order = "true", -- Can be true, false, or "fast". "fast" will turn it off for large directories.
+    natural_order = "true",
     win_options = {
       winbar = "%{v:lua.CustomOilBar()}",
     },
-    -- floating progress window
     progress = {
       max_width = 0.9,
       min_width = { 40, 0.4 },
@@ -25,11 +24,9 @@ return {
         winblend = 0,
       },
     },
-    -- floating SSH window
     ssh = {
       border = "rounded",
     },
-    -- floating keymaps help window
     keymaps_help = {
       border = "rounded",
     },
