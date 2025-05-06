@@ -1,22 +1,38 @@
 return {
-  "sainnhe/gruvbox-material",
+  "morhetz/gruvbox",
   lazy = false,
   priority = 1000,
   opts = {
-    background = "soft",
-    foreground = "material",
-    enable_italic = true,
-    enable_bold = true,
-    transparent_background = true,
+    background = "dark",
+    transparent = true,
   },
   config = function(_, opts)
-    vim.g.gruvbox_material_background = opts.background
-    vim.g.gruvbox_material_foreground = opts.foreground
-    vim.g.gruvbox_material_enable_italic = opts.enable_italic and 1 or 0
-    vim.g.gruvbox_material_enable_bold = opts.enable_bold and 1 or 0
-    vim.g.gruvbox_material_transparent_background = opts.transparent_background and 1 or 0
+    vim.o.background = opts.background
+    vim.cmd.colorscheme("gruvbox")
 
-    vim.cmd.colorscheme("gruvbox-material")
+    if opts.transparent then
+      local hl = vim.api.nvim_set_hl
+      hl(0, "Normal", { bg = "none" })
+      hl(0, "NormalNC", { bg = "none" })
+      hl(0, "NormalFloat", { bg = "none" })
+      hl(0, "FloatBorder", { bg = "none" })
+      hl(0, "SignColumn", { bg = "none" })
+      hl(0, "VertSplit", { bg = "none" })
+    end
+
+    -- If you're using notify.nvim and want to set its background too
+    local ok, notify = pcall(require, "notify")
+    if ok then
+      notify.setup({
+        background_colour = "#000000",
+        fps = 60, -- Can adjust as needed
+        timeout = 3000, -- Notification timeout in milliseconds
+        max_width = 80, -- Adjust the max width if necessary
+        max_height = 20, -- Adjust the max height if necessary
+        -- Add merge_duplicates to avoid duplicate notifications
+        merge_duplicates = true,
+      })
+    end
   end,
 }
 
