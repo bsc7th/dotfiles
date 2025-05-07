@@ -33,8 +33,10 @@ return {
       "bash",
       "toml",
       "yaml",
+      "gitignore",
       "go",
       "http",
+      "graphql",
     },
     incremental_selection = {
       enable = true,
