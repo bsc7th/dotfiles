@@ -7,9 +7,17 @@ return {
     transparent = true,
   },
   config = function(_, opts)
+    vim.g.gruvbox_italic = 1
+    vim.g.gruvbox_italicize_comments = 1
+    vim.g.gruvbox_italicize_strings = 1
+    vim.g.gruvbox_italicize_keywords = 1
+    vim.g.gruvbox_bold = 1
+
+    -- Apply background setting and load colorscheme
     vim.o.background = opts.background
     vim.cmd.colorscheme("gruvbox")
 
+    -- Transparent background setup
     if opts.transparent then
       local hl = vim.api.nvim_set_hl
       hl(0, "Normal", { bg = "none" })
@@ -20,16 +28,15 @@ return {
       hl(0, "VertSplit", { bg = "none" })
     end
 
-    -- If you're using notify.nvim and want to set its background too
+    -- nvim.notify setup
     local ok, notify = pcall(require, "notify")
     if ok then
       notify.setup({
         background_colour = "#000000",
-        fps = 60, -- Can adjust as needed
-        timeout = 3000, -- Notification timeout in milliseconds
-        max_width = 80, -- Adjust the max width if necessary
-        max_height = 20, -- Adjust the max height if necessary
-        -- Add merge_duplicates to avoid duplicate notifications
+        fps = 60,
+        timeout = 3000,
+        max_width = 80,
+        max_height = 20,
         merge_duplicates = true,
       })
     end
