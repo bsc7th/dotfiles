@@ -3,6 +3,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "saghen/blink.cmp",
+    { "williamboman/mason-lspconfig.nvim" },
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/neodev.nvim", opts = {} },
     { "ibhagwan/fzf-lua" },
@@ -66,64 +67,60 @@ return {
       end,
     })
 
-    require("mason-lspconfig").setup_handlers({
-      function(server_name)
-        setup_lsp_server(server_name, {})
-      end,
+    -- mason.nvim setup
+    require("mason").setup()
 
-      ["ts_ls"] = function()
-        setup_lsp_server("ts_ls", {
-          filetypes = { "typescript", "typescriptreact" },
-        })
-      end,
+    -- mason-lspconfig setup (Ensure this runs after mason.nvim is set up)
+    require("mason-lspconfig").setup({
+      ensure_installed = {
+        "astro",
+        "svelte",
+        "ts_ls",
+        "jsonls",
+        "graphql",
+        "lua_ls",
+        "emmet_ls",
+      },
+      automatic_enable = true,
+    })
 
-      ["astro"] = function()
-        setup_lsp_server("astro", {
-          filetypes = { "astro", "javascript", "typescript", "javascriptreact", "typescriptreact" },
-        })
-      end,
+    -- Manual setup for each server
+    setup_lsp_server("ts_ls", {
+      filetypes = { "typescript", "typescriptreact" },
+    })
 
-      ["svelte"] = function()
-        setup_lsp_server("svelte", {
-          filetypes = { "svlete", ".*js", ".*ts" },
-        })
-      end,
+    setup_lsp_server("astro", {
+      filetypes = { "astro", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+    })
 
-      ["jsonls"] = function()
-        local schemastore = require("schemastore")
+    setup_lsp_server("svelte", {
+      filetypes = { "svelte", "javascript", "typescript" },
+    })
 
-        setup_lsp_server("jsonls", {
-          settings = {
-            json = {
-              schemas = schemastore.json.schemas(),
-              validate = { enable = true },
-            },
-          },
-        })
-      end,
+    setup_lsp_server("jsonls", {
+      settings = {
+        json = {
+          schemas = require("schemastore").json.schemas(),
+          validate = { enable = true },
+        },
+      },
+    })
 
-      ["graphql"] = function()
-        setup_lsp_server("graphql", {
-          filetypes = { "graphql", "gql", "javascript", "typescript", "typescriptreact", "javascriptreact" },
-        })
-      end,
+    setup_lsp_server("graphql", {
+      filetypes = { "graphql", "gql", "javascript", "typescript", "typescriptreact", "javascriptreact" },
+    })
 
-      ["emmet_ls"] = function()
-        setup_lsp_server("emmet_ls", {
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "scss", "sass", "less" },
-        })
-      end,
+    setup_lsp_server("emmet_ls", {
+      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "scss", "sass", "less" },
+    })
 
-      ["lua_ls"] = function()
-        setup_lsp_server("lua_ls", {
-          settings = {
-            Lua = {
-              diagnostics = { globals = { "vim" } },
-              completion = { callSnippet = "Replace" },
-            },
-          },
-        })
-      end,
+    setup_lsp_server("lua_ls", {
+      settings = {
+        Lua = {
+          diagnostics = { globals = { "vim" } },
+          completion = { callSnippet = "Replace" },
+        },
+      },
     })
   end,
 }
