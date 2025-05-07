@@ -152,7 +152,7 @@ return {
     -- Gruvbox original mode colors
     local gruvbox_custom = {
       normal = {
-        a = { fg = "#1d2021", bg = "#d79921", gui = "bold" },
+        a = { fg = "#1d2021", bg = "#98971a", gui = "bold" },
         b = { fg = "#ebdbb2", bg = "#3c3836" },
         c = { fg = "#ebdbb2", bg = "#282828" },
       },
@@ -162,12 +162,12 @@ return {
         c = { fg = "#ebdbb2", bg = "#282828" },
       },
       visual = {
-        a = { fg = "#1d2021", bg = "#98971a", gui = "bold" },
+        a = { fg = "#1d2021", bg = "#689d6a", gui = "bold" },
         b = { fg = "#ebdbb2", bg = "#3c3836" },
         c = { fg = "#ebdbb2", bg = "#282828" },
       },
       replace = {
-        a = { fg = "#1d2021", bg = "#689d6a", gui = "bold" },
+        a = { fg = "#1d2021", bg = "#d79921", gui = "bold" },
         b = { fg = "#ebdbb2", bg = "#3c3836" },
         c = { fg = "#ebdbb2", bg = "#282828" },
       },
