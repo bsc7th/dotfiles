@@ -26,6 +26,20 @@ return {
     },
   },
   config = function(_, opts)
+    local function modify_opts(original_opts)
+      if not original_opts.formatters_by_ft.lua then
+        original_opts.formatters_by_ft.lua = { "stylua" }
+      end
+
+      if vim.fn.has("unix") == 1 then
+        original_opts.format_on_save.async = true
+      end
+
+      return original_opts
+    end
+
+    opts = modify_opts(opts)
+
     local ok, conform = pcall(require, "conform")
     if not ok then
       vim.notify("conform.nvim failed to load!", vim.log.levels.ERROR)
