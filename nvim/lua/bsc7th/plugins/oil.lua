@@ -49,6 +49,14 @@ return {
     require("mini.icons").setup()
     require("oil").setup(opts)
 
+    vim.api.nvim_set_hl(0, "WinBar", { fg = "#d3869b", bg = "#282828", bold = true })
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      pattern = "*",
+      callback = function()
+        vim.api.nvim_set_hl(0, "WinBar", { fg = "#d3869b", bg = "#282828", bold = true })
+      end,
+    })
+
     vim.keymap.set("n", "^", function()
       require("oil").open()
     end, { desc = "Open parent directory" })
