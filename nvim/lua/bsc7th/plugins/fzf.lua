@@ -119,7 +119,6 @@ return {
     local fzf = require("fzf-lua")
     fzf.setup(opts)
 
-    -- Custom directory search with Oil
     vim.api.nvim_create_user_command("FzfDirectories", function()
       local cwd = vim.fn.getcwd()
       fzf.fzf_exec("fd --type d", {
@@ -133,7 +132,6 @@ return {
       })
     end, {})
 
-    -- Optional: Git files via custom shell command
     vim.api.nvim_create_user_command("FzfGitFiles", function()
       fzf.fzf_exec("git ls-files", { prompt = "Git Files > " })
     end, {})
