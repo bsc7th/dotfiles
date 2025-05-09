@@ -86,6 +86,7 @@ return {
             "diff",
             symbols = icons.git,
             source = function()
+              ---@diagnostic disable-next-line: undefined-field
               local gitsigns = vim.b.gitsigns_status_dict
               if gitsigns then
                 return {
@@ -142,6 +143,7 @@ return {
           table.insert(opts.sections.lualine_c, {
             symbols.get,
             cond = function()
+              ---@diagnostic disable-next-line: undefined-field
               return vim.b.trouble_lualine ~= false and symbols.has()
             end,
           })
