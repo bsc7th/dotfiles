@@ -18,45 +18,38 @@ return {
     local capabilities = require("blink-cmp").get_lsp_capabilities()
     local fzf = require("fzf-lua")
 
+    local function map(mode, lhs, rhs, desc, opts)
+      vim.keymap.set(mode, lhs, rhs, vim.tbl_extend("force", { buffer = opts.buffer, silent = true }, { desc = desc }))
+    end
+
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
-        local opts = { buffer = ev.buf, silent = true }
-
-        local function map(mode, lhs, rhs, desc)
-          vim.keymap.set(mode, lhs, rhs, vim.tbl_extend("force", opts, { desc = desc }))
-        end
-
-        map("n", "gR", fzf.lsp_references, "References")
-        map("n", "gd", fzf.lsp_definitions, "Definitions")
-        map("n", "gD", vim.lsp.buf.declaration, "Declaration")
-        map("n", "gi", fzf.lsp_implementations, "Implementations")
-        map("n", "gt", fzf.lsp_typedefs, "Type Definitions")
-        map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "Code Actions")
-        map("n", "<leader>rn", vim.lsp.buf.rename, "Rename")
-        map("n", "<leader>D", fzf.lsp_document_diagnostics, "Document Diagnostics")
-        map("n", "<leader>d", vim.diagnostic.open_float, "Line Diagnostics")
+        local opts = { buffer = ev.buf }
+        map("n", "gR", fzf.lsp_references, "References", opts)
+        map("n", "gd", fzf.lsp_definitions, "Definitions", opts)
+        map("n", "gD", vim.lsp.buf.declaration, "Declaration", opts)
+        map("n", "gi", fzf.lsp_implementations, "Implementations", opts)
+        map("n", "gt", fzf.lsp_typedefs, "Type Definitions", opts)
+        map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "Code Actions", opts)
+        map("n", "<leader>rn", vim.lsp.buf.rename, "Rename", opts)
+        map("n", "<leader>D", fzf.lsp_document_diagnostics, "Document Diagnostics", opts)
+        map("n", "<leader>d", vim.diagnostic.open_float, "Line Diagnostics", opts)
         map("n", "[d", function()
           vim.diagnostic.goto_prev({ float = true })
-        end, "Previous Diagnostic")
+        end, "Previous Diagnostic", opts)
         map("n", "]d", function()
           vim.diagnostic.goto_next({ float = true })
-        end, "Next Diagnostic")
-        map("n", "K", vim.lsp.buf.hover, "Hover")
-        map("n", "<leader>rs", "<cmd>LspRestart<CR>", "Restart LSP")
+        end, "Next Diagnostic", opts)
+        map("n", "K", vim.lsp.buf.hover, "Hover", opts)
+        map("n", "<leader>rs", "<cmd>LspRestart<CR>", "Restart LSP", opts)
       end,
     })
 
     local servers = {
-      astro = {
-        filetypes = { "astro" },
-      },
-      svelte = {
-        filetypes = { "svelte", "javascript", "typescript" },
-      },
-      ts_ls = {
-        filetypes = { "typescript", "typescriptreact" },
-      },
+      astro = { filetypes = { "astro" } },
+      svelte = { filetypes = { "svelte", "javascript", "typescript" } },
+      ts_ls = { filetypes = { "typescript", "typescriptreact" } },
       jsonls = {
         settings = {
           json = {
@@ -79,14 +72,7 @@ return {
         },
       },
       graphql = {
-        filetypes = {
-          "graphql",
-          "gql",
-          "javascript",
-          "typescript",
-          "typescriptreact",
-          "javascriptreact",
-        },
+        filetypes = { "graphql", "gql", "javascript", "typescript", "typescriptreact", "javascriptreact" },
       },
       lua_ls = {
         settings = {
