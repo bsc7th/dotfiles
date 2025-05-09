@@ -49,7 +49,7 @@ return {
 
     local servers = {
       astro = {
-        filetypes = { "astro", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+        filetypes = { "astro" },
       },
       svelte = {
         filetypes = { "svelte", "javascript", "typescript" },
