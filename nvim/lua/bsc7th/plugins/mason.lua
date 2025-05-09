@@ -1,5 +1,6 @@
 return {
   "williamboman/mason.nvim",
+  event = { "LspAttach", "LspProgress" },
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -48,7 +49,9 @@ return {
     local mason_tool_installer = require("mason-tool-installer")
 
     mason.setup(opts.mason)
+
     mason_lspconfig.setup(opts.mason_lspconfig)
+
     mason_tool_installer.setup(opts.mason_tool_installer)
   end,
 }
