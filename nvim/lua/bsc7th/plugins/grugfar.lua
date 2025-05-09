@@ -1,7 +1,9 @@
 return {
   "MagicDuck/grug-far.nvim",
   lazy = true,
-  opts = { headerMaxWidth = 80 },
+  opts = {
+    headerMaxWidth = 80,
+  },
   keys = {
     {
       "<leader>gf",
@@ -19,4 +21,8 @@ return {
       desc = "Search and Replace",
     },
   },
+  config = function(_, opts)
+    local grug = require("grug-far")
+    grug.setup(opts)
+  end,
 }
