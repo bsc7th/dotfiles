@@ -67,10 +67,8 @@ return {
       end,
     })
 
-    -- mason.nvim setup
     require("mason").setup()
 
-    -- mason-lspconfig setup (Ensure this runs after mason.nvim is set up)
     require("mason-lspconfig").setup({
       ensure_installed = {
         "astro",
@@ -81,20 +79,27 @@ return {
         "lua_ls",
         "emmet_ls",
       },
-      automatic_enable = true,
+      automatic_enable = false,
+    })
+
+    require("neodev").setup({
+      library = vim.api.nvim_get_runtime_file("", true),
+      diagnostics = {
+        enable = true,
+      },
     })
 
     -- Manual setup for each server
-    setup_lsp_server("ts_ls", {
-      filetypes = { "typescript", "typescriptreact" },
-    })
-
     setup_lsp_server("astro", {
       filetypes = { "astro", "javascript", "typescript", "javascriptreact", "typescriptreact" },
     })
 
     setup_lsp_server("svelte", {
       filetypes = { "svelte", "javascript", "typescript" },
+    })
+
+    setup_lsp_server("ts_ls", {
+      filetypes = { "typescript", "typescriptreact" },
     })
 
     setup_lsp_server("jsonls", {
@@ -117,8 +122,21 @@ return {
     setup_lsp_server("lua_ls", {
       settings = {
         Lua = {
-          diagnostics = { globals = { "vim" } },
-          completion = { callSnippet = "Replace" },
+          runtime = {
+            version = "LuaJIT",
+          },
+          diagnostics = {
+            globals = {
+              "vim",
+              "require",
+            },
+          },
+          workspace = {
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+          telemetry = {
+            enable = false,
+          },
         },
       },
     })
