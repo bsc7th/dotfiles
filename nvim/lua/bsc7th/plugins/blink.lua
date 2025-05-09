@@ -25,6 +25,10 @@ return {
     fuzzy = {
       implementation = "prefer_rust_with_warning",
     },
+    cmdline = {
+      keymap = { preset = "inherit" },
+      completion = { ghost_text = { enabled = false } },
+    },
   },
   config = function(_, opts)
     require("blink.cmp").setup(opts)
