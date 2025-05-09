@@ -20,7 +20,7 @@ return {
 
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = lint_augroup,
-      callback = function()
+      callback = function(_, _)
         local ft = vim.bo.filetype
         if lint.linters_by_ft[ft] ~= nil then
           lint.try_lint()
@@ -28,7 +28,7 @@ return {
       end,
     })
 
-    vim.keymap.set("n", "<leader>ll", function()
+    vim.keymap.set("n", "<leader>ll", function(_)
       local ft = vim.bo.filetype
       if lint.linters_by_ft[ft] ~= nil then
         lint.try_lint()
