@@ -32,7 +32,7 @@ return {
       end
 
       if vim.fn.has("unix") == 1 then
-        original_opts.format_on_save.async = true
+        original_opts.format_on_save.async = false
       end
 
       return original_opts
@@ -51,7 +51,7 @@ return {
     vim.keymap.set({ "n", "v" }, "<leader>pf", function()
       conform.format({
         lsp_fallback = true,
-        async = true,
+        async = false,
         quiet = false,
         timeout_ms = 3000,
       })
