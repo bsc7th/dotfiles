@@ -2,8 +2,9 @@ return {
   "ibhagwan/fzf-lua",
   enabled = true,
   event = "VeryLazy",
-  dependencies = { "echasnovski/mini.icons" },
-
+  dependencies = {
+    "echasnovski/mini.icons",
+  },
   keys = {
     {
       "<leader>fc",
@@ -97,7 +98,6 @@ return {
       desc = "Resume previous search",
     },
   },
-
   opts = {
     file_icon_padding = "",
     keymap = {
@@ -105,32 +105,35 @@ return {
         ["CTRL-Q"] = "select-all+accept",
       },
     },
-    fzf_opts = { ["--wrap"] = true },
+    fzf_opts = {
+      ["--wrap"] = true,
+    },
     winopts = {
-      preview = { wrap = "wrap" },
+      preview = {
+        wrap = "wrap",
+      },
       formatter = "path.filename_first",
     },
   },
-
   config = function(_, opts)
     local fzf = require("fzf-lua")
     fzf.setup(opts)
 
-    local function fzf_directories()
+    -- Custom directory search with Oil
+    vim.api.nvim_create_user_command("FzfDirectories", function()
       local cwd = vim.fn.getcwd()
       fzf.fzf_exec("fd --type d", {
         prompt = require("fzf-lua.path").shorten(cwd) .. "> ",
         cwd = cwd,
         actions = {
           ["default"] = function(selected)
-            vim.cmd("Oil --float " .. vim.fn.fnameescape(cwd) .. "/" .. selected[1])
+            vim.cmd("Oil --float " .. vim.fn.fnameescape(cwd .. "/" .. selected[1]))
           end,
         },
       })
-    end
+    end, {})
 
-    vim.api.nvim_create_user_command("FzfDirectories", fzf_directories, {})
-
+    -- Optional: Git files via custom shell command
     vim.api.nvim_create_user_command("FzfGitFiles", function()
       fzf.fzf_exec("git ls-files", { prompt = "Git Files > " })
     end, {})
