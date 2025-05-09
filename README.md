@@ -10,7 +10,7 @@ I'm deeply grateful to the developers who have inspired and guided my setup:
 
 ### [Folke](https://github.com/folke)
 
-![Neovim Plugins](assets/fzf-lua.jpeg)
+![Neovim Plugins](assets/fzf.jpeg)
 
 Many of the plugins I use are inspired by Folke’s incredible work. I started by exploring his [LazyVim](https://www.lazyvim.org/) distro, then gradually customized and adapted it using the [lazy.nvim](https://lazy.folke.io/) plugin manager. His work helped me build a strong foundation for my Neovim setup.
 
