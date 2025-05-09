@@ -1,6 +1,9 @@
 return {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
+  cond = function()
+    return vim.fn.isdirectory(".git") == 1
+  end,
   opts = {
     signs = {
       add = { text = "▎" },
@@ -43,7 +46,6 @@ return {
       map("n", "]H", function()
         gs.nav_hunk("last")
       end, "Last Hunk")
-
       map("n", "[H", function()
         gs.nav_hunk("first")
       end, "First Hunk")
@@ -53,13 +55,17 @@ return {
       map("n", "<leader>ghS", gs.stage_buffer, "Stage Buffer")
       map("n", "<leader>ghu", gs.undo_stage_hunk, "Undo Stage Hunk")
       map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
+
       map("n", "<leader>ghp", gs.preview_hunk_inline, "Preview Hunk Inline")
 
-      map("n", "<leader>ghb", function()
-        vim.defer_fn(function()
+      map(
+        "n",
+        "<leader>ghb",
+        vim.schedule_wrap(function()
           gs.blame_line({ full = true })
-        end, 0)
-      end, "Blame Line")
+        end),
+        "Blame Line"
+      )
 
       map("n", "<leader>ghB", gs.blame, "Blame Buffer")
       map("n", "<leader>ghd", gs.diffthis, "Diff This")
@@ -67,12 +73,12 @@ return {
         gs.diffthis("~")
       end, "Diff This ~")
 
-      map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
-
       map("n", "<leader>gtg", gs.toggle_signs, "Toggle GitSigns")
       map("n", "<leader>glh", gs.toggle_linehl, "Toggle Line Highlight")
       map("n", "<leader>gnh", gs.toggle_numhl, "Toggle Number Highlight")
       map("n", "<leader>glb", gs.toggle_current_line_blame, "Toggle Current Line Blame")
+
+      map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Select Hunk")
     end,
   },
 }
