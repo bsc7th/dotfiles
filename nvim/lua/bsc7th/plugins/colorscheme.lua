@@ -2,24 +2,20 @@ return {
   "morhetz/gruvbox",
   lazy = false,
   priority = 1000,
-  opts = {
-    background = "dark",
-    transparent = true,
-  },
-  config = function(_, opts)
+  config = function()
+    local transparent = true
+
+    vim.o.background = "dark"
     vim.g.gruvbox_italic = 1
     vim.g.gruvbox_italicize_comments = 1
     vim.g.gruvbox_italicize_strings = 1
     vim.g.gruvbox_italicize_keywords = 1
     vim.g.gruvbox_bold = 1
 
-    -- Apply background setting and load colorscheme
-    vim.o.background = opts.background
     vim.cmd.colorscheme("gruvbox")
 
-    -- Transparent background setup
-    if opts.transparent then
-      local hl = vim.api.nvim_set_hl
+    local hl = vim.api.nvim_set_hl
+    if transparent then
       hl(0, "Normal", { bg = "none" })
       hl(0, "NormalNC", { bg = "none" })
       hl(0, "NormalFloat", { bg = "none" })
@@ -28,7 +24,6 @@ return {
       hl(0, "VertSplit", { bg = "none" })
     end
 
-    -- nvim.notify setup
     local ok, notify = pcall(require, "notify")
     if ok then
       notify.setup({
