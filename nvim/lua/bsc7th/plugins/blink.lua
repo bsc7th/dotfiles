@@ -1,8 +1,8 @@
 return {
   "saghen/blink.cmp",
+  version = "1.*",
   lazy = true,
   enabled = true,
-  version = "1.*",
   event = { "InsertEnter", "CmdlineEnter" },
   dependencies = {
     "rafamadriz/friendly-snippets",
@@ -27,7 +27,11 @@ return {
     },
     cmdline = {
       keymap = { preset = "inherit" },
-      completion = { ghost_text = { enabled = false } },
+      completion = {
+        ghost_text = {
+          enabled = false,
+        },
+      },
     },
   },
   config = function(_, opts)
