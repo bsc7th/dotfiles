@@ -11,4 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("bsc7th.plugins")
+require("lazy").setup({
+  spec = {
+    { import = "bsc7th.plugins" },
+  },
+  checker = { enabled = true },
+})
