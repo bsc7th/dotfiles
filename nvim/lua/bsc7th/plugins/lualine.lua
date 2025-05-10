@@ -14,6 +14,17 @@ return {
       return vim.fn.fnamemodify(vim.fn.getcwd(), ":~")
     end
 
+    local function node_version()
+      local handle = io.popen("node -v 2>/dev/null")
+      if handle then
+        local version = handle:read("*a")
+        handle:close()
+        return " " .. version:gsub("%s+", "") -- the magic trims newline
+      else
+        return "Node N/A"
+      end
+    end
+
     local gruvbox = {
       normal = {
         a = { fg = "#1d2021", bg = "#98971a", gui = "bold" },
@@ -69,7 +80,9 @@ return {
             padding = { left = 1, right = 0 },
           },
         },
-        lualine_x = {},
+        lualine_x = {
+          node_version,
+        },
         lualine_y = {
           { "progress", separator = " ", padding = { left = 1, right = 0 } },
           { "location", padding = { left = 0, right = 1 } },
