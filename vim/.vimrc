@@ -41,6 +41,14 @@ syntax on
 set number
 set relativenumber
 set background=dark
+set clipboard=unnamedplus
+set backspace=2
+set nocompatible
+filetype on
+filetype plugin indent on
+
+" Highlight Search
+set hlsearch
 
 if has('termguicolors')
   set termguicolors
@@ -50,6 +58,7 @@ colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
 " Indentation
+set smartindent
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Gruvbox Customization
@@ -58,33 +67,61 @@ let g:gruvbox_italic = 1
 let g:gruvbox_italicize_comments = 1
 let g:gruvbox_italicize_strings = 1
 let g:gruvbox_improved_warnings = 1
-let g:gruvbox_improved_strings = 1
+" let g:gruvbox_improved_strings = 1
 
 " NerdCommenter
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
 " Filetype Detection
-autocmd BufRead,BufNewFile *.html set filetype=html
-autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
-autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
+augroup FiletypeDetection
+  autocmd!
+  autocmd BufRead,BufNewFile *.html set filetype=html
+  autocmd BufRead,BufNewFile *.css set filetype=css
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascriptreact
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescriptreact
+  autocmd BufRead,BufNewFile *.astro set filetype=astro
+  autocmd BufRead,BufNewFile *.svelte set filetype=svelte
+augroup END
 
 " Whitespace Cleanup
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Keymaps
 inoremap jk <ESC>
-nnoremap <leader>ee :NERDTreeToggle<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>g :Rg<CR>
-vnoremap <leader>y "+y
-nnoremap <leader>Y "+Y
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
+
+" Yank to system clipboard
+vnoremap y "+y
+nnoremap y "+y
+nnoremap Y "+Y
+
+" Paste from system clipboard
+nnoremap p "+p
+nnoremap P "+P
+
+" Clear Highlight
+nnoremap <leader>ch :nohlsearch<CR>
+
+" Replace selection without overwriting register
 xnoremap p "_dP
+
+" Comment
+xmap gc <Plug>NERDCommenterToggle
+nmap gc <Plug>NERDCommenterToggle
+
+" Plug keymaps
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pc :PlugClean<CR>
+
+" Open Coc config
+nnoremap <leader>cc :CocConfig<CR>
 
 " CoC (Completion & Formatting)
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <silent><expr> <C-Space> coc#refresh()
 autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx :silent! call CocAction('format')
+
