@@ -13,7 +13,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'othree/html5.vim'
 Plug 'evanleck/vim-svelte'
 Plug 'wuelnerdotexe/vim-astro'
@@ -21,7 +20,6 @@ Plug 'elzr/vim-json'
 Plug 'tailwindlabs/tailwindcss-intellisense',
 
 " File Explorer & Search
-Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -77,8 +75,9 @@ let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
 " Filetype Detection
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+autocmd BufRead,BufNewFile *.html set filetype=html
+autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 
 " Whitespace Cleanup
 autocmd BufWritePre * :%s/\s\+$//e
