@@ -9,7 +9,7 @@ return {
     vim.g.gruvbox_italic = 1
     vim.g.gruvbox_italicize_comments = 1
     vim.g.gruvbox_italicize_strings = 1
-    vim.g.gruvbox_improved_strings = 1
+    -- vim.g.gruvbox_improved_strings = 1
     vim.g.gruvbox_italicize_keywords = 1
     vim.g.gruvbox_bold = 1
 
