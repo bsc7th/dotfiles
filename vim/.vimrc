@@ -1,4 +1,4 @@
-" Plugin Manager Setup
+"Reloads your vim config Plugin Manager Setup
 call plug#begin('~/.vim/plugged')
 
 " UI & Theme
@@ -10,18 +10,23 @@ Plug 'preservim/nerdcommenter'
 
 " LSP & Syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'othree/html5.vim'
+Plug 'tailwindlabs/tailwindcss-intellisense',
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'othree/html5.vim'
 Plug 'evanleck/vim-svelte'
 Plug 'wuelnerdotexe/vim-astro'
 Plug 'elzr/vim-json'
-Plug 'tailwindlabs/tailwindcss-intellisense',
+Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
+
+Plug 'ryanoasis/vim-devicons'
 
 " File Explorer & Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'tpope/vim-surround'
 
 " Git Integration
 Plug 'tpope/vim-fugitive'
@@ -111,15 +116,18 @@ xnoremap p "_dP
 xmap gc <Plug>NERDCommenterToggle
 nmap gc <Plug>NERDCommenterToggle
 
+" Reloads vim config
+nnoremap <leader>rl :source $MYVIMRC \| echo "Vim config reloaded ✅"<CR>
+
 " Plug keymaps
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>pu :PlugUpdate<CR>
 nnoremap <leader>pc :PlugClean<CR>
 
 " Open Coc config
-nnoremap <leader>cc :CocConfig<CR>
+nnoremap <leader>cf :CocConfig<CR>
 
-" CoC (Completion & Formatting)
+" " CoC (Completion & Formatting)
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <silent><expr> <C-Space> coc#refresh()
