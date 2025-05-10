@@ -9,6 +9,7 @@ return {
     vim.g.gruvbox_italic = 1
     vim.g.gruvbox_italicize_comments = 1
     vim.g.gruvbox_italicize_strings = 1
+    vim.g.gruvbox_improved_strings = 1
     vim.g.gruvbox_italicize_keywords = 1
     vim.g.gruvbox_bold = 1
 
@@ -22,18 +23,6 @@ return {
       hl(0, "FloatBorder", { bg = "none" })
       hl(0, "SignColumn", { bg = "none" })
       hl(0, "VertSplit", { bg = "none" })
-    end
-
-    local ok, notify = pcall(require, "notify")
-    if ok then
-      notify.setup({
-        background_colour = "#000000",
-        fps = 60,
-        timeout = 3000,
-        max_width = 80,
-        max_height = 20,
-        merge_duplicates = true,
-      })
     end
   end,
 }
