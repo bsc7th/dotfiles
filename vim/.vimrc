@@ -3,8 +3,6 @@ call plug#begin('~/.vim/plugged')
 
 " UI & Theme
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Editing Enhancements
 Plug 'jiangmiao/auto-pairs'
@@ -16,6 +14,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'othree/html5.vim'
+Plug 'evanleck/vim-svelte'
+Plug 'wuelnerdotexe/vim-astro'
+Plug 'elzr/vim-json'
+Plug 'tailwindlabs/tailwindcss-intellisense',
 
 " File Explorer & Search
 Plug 'preservim/nerdtree'
@@ -40,6 +43,11 @@ syntax on
 set number
 set relativenumber
 set background=dark
+
+if has('termguicolors')
+  set termguicolors
+endif
+
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
