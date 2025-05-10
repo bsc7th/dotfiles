@@ -60,16 +60,6 @@ let g:gruvbox_italicize_strings = 1
 let g:gruvbox_improved_warnings = 1
 let g:gruvbox_improved_strings = 1
 
-" Airline Configuration
-let g:airline_theme='gruvbox'
-let g:airline_powerline_fonts = 1
-let g:airline_section_a = '%m %Y'
-let g:airline_section_b = ''
-let g:airline_section_c = '%f'
-let g:airline_section_x = ''
-let g:airline_section_y = ''
-let g:airline_section_z = '%l:%c'
-
 " NerdCommenter
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
