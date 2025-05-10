@@ -1,14 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
-  init = function()
-    vim.g.lualine_laststatus = vim.o.laststatus
-    if vim.fn.argc(-1) > 0 then
-      vim.o.statusline = " "
-    else
-      vim.o.laststatus = 0
-    end
-  end,
   opts = function()
     local function get_pretty_path()
       return vim.fn.fnamemodify(vim.fn.getcwd(), ":~")
@@ -19,7 +11,7 @@ return {
       if handle then
         local version = handle:read("*a")
         handle:close()
-        return " " .. version:gsub("%s+", "") -- the magic trims newline
+        return " " .. version:gsub("%s+", "")
       else
         return "Node N/A"
       end
@@ -56,7 +48,7 @@ return {
     return {
       options = {
         theme = gruvbox,
-        globalstatus = vim.o.laststatus == 3,
+        globalstatus = true,
         disabled_filetypes = { statusline = {} },
       },
       sections = {
