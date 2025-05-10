@@ -23,7 +23,7 @@ function y() {
 }
 
 # Alias "ls" to use eza with icons and simplified output
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza -al --color=always --long --git --icons=always --created --time-style=long-iso"
 
 # Initialize Zoxide for smarter directory navigation
 eval "$(zoxide init zsh)"
