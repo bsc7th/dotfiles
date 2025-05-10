@@ -13,7 +13,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/html5.vim'
 Plug 'tailwindlabs/tailwindcss-intellisense',
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'yuezk/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'evanleck/vim-svelte'
 Plug 'wuelnerdotexe/vim-astro'
@@ -131,5 +131,6 @@ nnoremap <leader>cf :CocConfig<CR>
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <silent><expr> <C-Space> coc#refresh()
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx :silent! call CocAction('format')
 
