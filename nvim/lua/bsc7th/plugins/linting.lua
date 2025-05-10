@@ -1,5 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
+  version = "*",
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     linters_by_ft = {

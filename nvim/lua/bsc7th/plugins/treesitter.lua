@@ -1,10 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  version = "*",
   dependencies = {
     "nvim-treesitter/nvim-treesitter-context",
     "windwp/nvim-ts-autotag",
   },
-  version = false,
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
   cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },

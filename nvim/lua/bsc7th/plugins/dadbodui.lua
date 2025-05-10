@@ -1,5 +1,6 @@
 return {
   "kristijanhusak/vim-dadbod-ui",
+  version = "*",
   dependencies = {
     { "tpope/vim-dadbod", lazy = true },
     {

@@ -1,5 +1,6 @@
 return {
   "ThePrimeagen/refactoring.nvim",
+  version = "*",
   event = "BufRead",
   opts = {
     keys = {

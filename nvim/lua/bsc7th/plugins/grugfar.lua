@@ -1,5 +1,6 @@
 return {
   "MagicDuck/grug-far.nvim",
+  version = "*",
   lazy = true,
   opts = {
     headerMaxWidth = 80,
