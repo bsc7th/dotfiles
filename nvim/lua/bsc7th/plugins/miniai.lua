@@ -5,6 +5,14 @@ return {
   dependencies = "nvim-treesitter/nvim-treesitter-textobjects",
   opts = function()
     local ai = require("mini.ai")
+
+    vim.keymap.set(
+      "o",
+      "aF",
+      "<cmd>lua require('mini.ai').select_textobject('f', 'a')<CR>",
+      { desc = "Around function" }
+    )
+
     return {
       n_lines = 500,
       custom_textobjects = {
@@ -14,6 +22,8 @@ return {
         }),
         f = ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
         c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),
+        b = { "%b()", "%b[]", "%b{}" },
+        m = { "^#+%s().-()%s*#", "^#+%s().-()%s*$" },
         t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
         d = { "%f[%d]%d+" },
         e = {
@@ -22,6 +32,10 @@ return {
         },
         u = ai.gen_spec.function_call(),
         U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }),
+        x = ai.gen_spec.treesitter({
+          a = { "@tag.outer" },
+          i = { "@tag.inner" },
+        }),
       },
     }
   end,
