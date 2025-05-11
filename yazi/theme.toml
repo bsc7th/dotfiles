@@ -1,3 +1,17 @@
-[flavor]
-# dark = "catppuccin-mocha"
-# light = "catppuccin-mocha"
+[colors]
+background = "#2c2f36"
+foreground = "#d3d0c8"
+selected_bg = "#5c5e63"
+selected_fg = "#d3d0c8"
+directory_fg = "#a7c080"
+symlink_fg = "#d19e8e"
+executable_fg = "#ffb86c"
+error_fg = "#f7768e"
+
+[highlights]
+directory = "#a7c080"
+symlink = "#d19e8e"
+executable = "#ffb86c"
+error = "#f7768e"
+selected = "#ffcc66"
+
