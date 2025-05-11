@@ -29,7 +29,7 @@ alias ls="eza -al --color=always --long --git --icons=always --created --time-st
 eval "$(zoxide init zsh)"
 
 # Set the default theme for bat syntax highlighting
-export BAT_THEME=ansi
+export BAT_THEME="gruvbox-dark"
 
 # Preview files or directories in FZF
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
@@ -71,3 +71,13 @@ eval "$(fzf --zsh)"
 
 # Load Powerlevel10k configuration if it exists
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Gruvbox style color scheme
+export FZF_DEFAULT_OPTS="
+  --color=fg:#ebdbb2,bg:#282828,fg+:#ebdbb2,bg+:#3c3836,hl:#fabd2f,hl+:#fabd2f \
+  --color=info:#83a598,prompt:#b8bb26,pointer:#fe8019,marker:#d3869b,spinner:#fe8019,header:#928374"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
