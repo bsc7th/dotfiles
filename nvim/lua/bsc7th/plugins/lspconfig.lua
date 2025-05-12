@@ -49,7 +49,7 @@ return {
 
     local servers = {
       astro = { filetypes = { "astro" } },
-      svelte = { filetypes = { "svelte", "javascript", "typescript" } },
+      svelte = { filetypes = { "svelte", "*.js", "*.ts" } },
       ts_ls = { filetypes = { "typescript", "typescriptreact" } },
       jsonls = {
         settings = {
