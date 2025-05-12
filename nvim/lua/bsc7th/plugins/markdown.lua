@@ -1,7 +1,11 @@
 return {
-  "MeanderingProgrammer/markdown.nvim",
+  "MeanderingProgrammer/render-markdown.nvim",
   version = "*",
-  name = "render-markdown",
+  event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "echasnovski/mini.icons",
+  },
   ft = { "markdown" },
   opts = {
     html = { enabled = false },
