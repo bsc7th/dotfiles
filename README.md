@@ -1,5 +1,9 @@
 # bsc7th Dotfiles
 
+<a href="https://dotfyle.com/bsc7th/dotfiles-nvim"><img src="https://dotfyle.com/bsc7th/dotfiles-nvim/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/bsc7th/dotfiles-nvim"><img src="https://dotfyle.com/bsc7th/dotfiles-nvim/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/bsc7th/dotfiles-nvim"><img src="https://dotfyle.com/bsc7th/dotfiles-nvim/badges/plugin-manager?style=flat" /></a>
+
 ![Neovim Performace](assets/nvim-perf.jpeg)
 
 Welcome to my personal dotfiles, the configuration I use daily as I continue my journey in web development. This setup evolves as I learn and discover better tools and workflows.
