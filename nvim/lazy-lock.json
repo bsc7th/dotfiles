@@ -35,7 +35,7 @@
   "refactoring.nvim": { "branch": "master", "commit": "2be7ea3f10b7e59658f5abf6dffc50b5d61964d6" },
   "render-markdown.nvim": { "branch": "main", "commit": "935c2c70c296d87ed1bcce9ce667c239c9c982b5" },
   "rest.nvim": { "branch": "main", "commit": "2ded89dbda1fd3c1430685ffadf2df8beb28336d" },
-  "schemastore.nvim": { "branch": "main", "commit": "df87d16fc4ea7c2c67cfc00b513861738693fe07" },
+  "schemastore.nvim": { "branch": "main", "commit": "b20f287e59a5376ca0de23140c6d94563d64695d" },
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "trouble.nvim": { "branch": "main", "commit": "748ca2789044607f19786b1d837044544c55e80a" },
   "vim-dadbod": { "branch": "master", "commit": "e95afed23712f969f83b4857a24cf9d59114c2e6" },
