@@ -73,7 +73,16 @@ return {
         },
       },
       graphql = {
-        filetypes = { "graphql", "gql", "javascript", "typescript", "typescriptreact", "javascriptreact" },
+        filetypes = {
+          "graphql",
+          "gql",
+          "javascript",
+          "typescript",
+          "typescriptreact",
+          "javascriptreact",
+          "astro",
+          "svelte",
+        },
       },
       lua_ls = {
         settings = {
