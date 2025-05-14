@@ -1,4 +1,4 @@
-# bsc7th Dotfiles
+# bsc7th dotfiles
 
 <a href="https://dotfyle.com/bsc7th/dotfiles-nvim"><img src="https://dotfyle.com/bsc7th/dotfiles-nvim/badges/plugins?style=for-the-badge" /></a>
 <a href="https://dotfyle.com/bsc7th/dotfiles-nvim"><img src="https://dotfyle.com/bsc7th/dotfiles-nvim/badges/leaderkey?style=for-the-badge" /></a>
@@ -47,10 +47,10 @@ His content introduced me to the idea of integrating testing into my daily workf
 
 ## Purpose
 
-This configuration is tailored for my current tech stack and goals:
+This configuration is aligned with my current tech stack and development goals:
 
-- Primarily focused on frontend development using **HTMX**, **React**,and **Astro**
-- Some backend work using **Go (Golang)**
+- Primarily focused on front-end development using HTMX, React, and Astro
+- Involved in some back-end work using Python and Go, often integrated with HTMX
 
 As I grow and learn, I continue refining and improving this setup to better support my workflow.
 
