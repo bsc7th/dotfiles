@@ -29,6 +29,7 @@ return {
           "astro",
           "svelte",
           "emmet_ls",
+          "pyright",
           "graphql",
           "prismals",
         },
@@ -37,8 +38,11 @@ return {
       mason_tool_installer = {
         ensure_installed = {
           "prettier",
-          "eslint_d",
           "stylua",
+          "isort",
+          "black",
+          "eslint_d",
+          "pylint",
         },
         automatic_enable = true,
       },
