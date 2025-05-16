@@ -59,5 +59,6 @@ return {
 --   config = function(_, opts)
 --     require("solarized-osaka").setup(opts)
 --     vim.cmd.colorscheme("solarized-osaka")
+--     vim.api.nvim_set_hl(0, "Visual", { reverse = true })
 --   end,
 -- }
