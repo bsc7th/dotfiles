@@ -70,6 +70,14 @@ return {
           "scss",
           "sass",
           "less",
+          "astro",
+        },
+        init_options = {
+          html = {
+            options = {
+              ["bem.enabled"] = true,
+            },
+          },
         },
       },
       graphql = {
