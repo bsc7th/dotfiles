@@ -11,7 +11,7 @@ return {
       typescript = { "prettier" },
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
-      astro = { "prettier", "prettier-plugin-astro" },
+      astro = { "prettier" },
       json = { "prettier" },
       yaml = { "prettier" },
       graphql = { "prettier" },
